@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hero&display=swap" rel="stylesheet"> <!-- Add link to Hero font -->
+    <link href="https://fonts.googleapis.com/css2?family=Hero&family=Poppins:wght@300;400&display=swap" rel="stylesheet"> <!-- Add fonts: Hero & Poppins -->
     <style>
         body { 
             display: flex; 
@@ -12,45 +12,62 @@
             justify-content: center; 
             align-items: center; 
             height: 100vh; 
-            font-family: Arial, sans-serif; 
+            font-family: 'Poppins', sans-serif; /* Cleaner font */
             text-align: center;
             background-color: #949494; /* Background color */
+            margin: 0;
         }
         img {
             max-width: 200px; /* Adjust the size as needed */
-            margin-bottom: 20px; /* Space between logo and form */
+            margin-bottom: 30px; /* Space between logo and form */
         }
         h1 { 
             font-family: 'Hero', sans-serif; /* Change font to Hero */
-            font-size: 2em; /* Decreased font size */
+            font-size: 2em; /* Adjust font size */
             font-weight: normal; /* Not bold */
-            margin-bottom: 20px; /* Space between heading and form */
-            color: #ffffff; /* Change heading color to white for visibility */
+            margin-bottom: 30px; /* More space under heading */
+            color: #ffffff; /* White heading */
+            letter-spacing: 1px; /* Slight spacing for refinement */
         }
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 30px;
+            background: #f0f0f0; /* Light background for the form */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
         }
         input {
-            padding: 8px; /* Reduced padding */
-            margin: 8px 0; /* Reduced margin */
-            width: 200px; /* Width of the input fields reduced */
+            padding: 12px; /* Increased padding */
+            margin: 10px 0; /* Margin between inputs */
+            width: 230px; /* Adjusted input width */
             border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #ffffff; /* Input fields background color */
+            border-radius: 6px;
+            background-color: #fff; /* Input fields background color */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for inputs */
+            font-size: 14px;
+        }
+        input:focus {
+            border-color: #007BFF; /* Highlighted border on focus */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow */
+            outline: none;
         }
         button {
-            padding: 8px 12px; /* Reduced button padding */
-            margin-top: 10px;
+            padding: 12px 20px; /* Slightly larger button */
+            margin-top: 20px;
             border: none;
-            border-radius: 4px;
-            background-color: #007BFF; /* Bootstrap primary color */
+            border-radius: 6px;
+            background-color: #007BFF; /* Blue button */
             color: white;
+            font-size: 14px;
             cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Button shadow */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
         }
         button:hover {
-            background-color: #0056b3; /* Darker shade for hover effect */
+            background-color: #0056b3; /* Darker blue on hover */
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.4); /* Stronger shadow on hover */
         }
     </style>
 </head>
