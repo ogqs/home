@@ -34,6 +34,7 @@
             padding: 20px; /* Padding for dropdown */
             border-radius: 8px; /* Rounded corners */
             z-index: 1000; /* Ensure it appears above other content */
+            width: 280px; /* Smaller width */
         }
         .login-header {
             font-family: 'Hero', sans-serif; /* Hero font */
@@ -52,17 +53,16 @@
         }
         form {
             width: 100%;
-            max-width: 320px; /* Centered form with max width */
             display: flex;
             flex-direction: column;
         }
         input {
-            padding: 12px; /* Comfortable padding */
+            padding: 10px; /* Comfortable padding */
             margin: 10px 0; /* Space between inputs */
             border: none; /* Remove border */
             border-bottom: 2px solid #fff; /* White bottom border */
             background: none; /* No background color */
-            font-size: 16px; /* Bigger text for elegance */
+            font-size: 14px; /* Smaller font for elegance */
             color: #fff; /* White text */
             transition: border-color 0.3s ease; /* Smooth border color change */
         }
@@ -74,13 +74,13 @@
             outline: none; /* Remove default focus outline */
         }
         button {
-            padding: 12px;
+            padding: 10px;
             margin-top: 20px;
             border: none;
             border-radius: 30px; /* Fully rounded button */
             background-color: #000; /* Black button */
             color: white;
-            font-size: 16px;
+            font-size: 14px; /* Smaller button text */
             font-weight: 400; /* Medium font for button */
             cursor: pointer;
             transition: background-color 0.3s ease; /* Smooth hover effect */
@@ -90,12 +90,17 @@
         }
         .contact-us {
             margin-top: 20px; /* Space above the link */
-            color: #fff; /* White text for the link */
+            color: #FFD700; /* Gold color for visibility */
             text-decoration: none; /* No underline */
-            font-size: 0.9em; /* Slightly smaller font size */
+            font-size: 1.1em; /* Slightly larger font size */
+            font-weight: bold; /* Bold for emphasis */
+            padding: 10px; /* Padding for better click area */
+            border: 2px solid #FFD700; /* Gold border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
         }
         .contact-us:hover {
-            text-decoration: underline; /* Underline on hover */
+            background-color: rgba(255, 215, 0, 0.2); /* Light gold background on hover */
         }
         .login-button {
             background-color: #007BFF; /* Blue button */
