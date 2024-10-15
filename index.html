@@ -16,22 +16,29 @@
             background-color: #949494; /* Background color */
             color: #333; /* Text color */
             margin: 0;
+            position: relative; /* Positioning context for the login dropdown */
         }
         img {
             max-width: 250px; /* Increased logo size */
             margin-bottom: 40px; /* Space below the logo */
         }
-        h1 { 
-            font-family: 'Hero', sans-serif; /* Hero font */
-            font-size: 1.5em; /* Decreased font size */
-            font-weight: 300; /* Light weight for modern look */
-            color: #ffffff; /* White heading */
-            letter-spacing: 1px; /* Subtle letter spacing */
-            margin-bottom: 30px; /* Balanced space under heading */
-            position: absolute; /* Positioning for right corner */
+        .login-container {
+            position: absolute; /* Positioning for dropdown */
             top: 20px; /* Distance from the top */
             right: 20px; /* Distance from the right */
-            text-align: right; /* Align text to the right */
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            align-items: flex-end; /* Align text to the right */
+            background-color: #000; /* Black background for dropdown */
+            padding: 20px; /* Padding for dropdown */
+            border-radius: 8px; /* Rounded corners */
+        }
+        .login-header {
+            font-family: 'Hero', sans-serif; /* Hero font */
+            font-size: 1.5em; /* Header size */
+            font-weight: 300; /* Light weight for modern look */
+            color: #ffffff; /* White heading */
+            margin-bottom: 10px; /* Space under heading */
         }
         .about-us {
             margin-bottom: 20px; /* Space between About Us and form */
@@ -88,6 +95,19 @@
         .contact-us:hover {
             text-decoration: underline; /* Underline on hover */
         }
+        .login-button {
+            background-color: #007BFF; /* Blue button */
+            color: white; /* White text */
+            padding: 10px 15px; /* Padding for the button */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 1em; /* Font size */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        .login-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
     </style>
 </head>
 <body>
@@ -98,15 +118,32 @@
         <p>Welcome to Owen-Goodall Quantity Surveyors, based in Christchurch, New Zealand. We specialise in providing expert cost management and advisory services to help our clients achieve optimal project outcomes. Our dedicated team is committed to delivering excellence in every aspect of quantity surveying.</p>
     </div>
 
-    <!-- Moved Client Login Title -->
-    <h1>Client Login</h1>
-    <form action="#" method="POST">
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
+    <!-- Login Button -->
+    <button class="login-button" onclick="toggleLogin()">Client Login</button>
+    
+    <!-- Login Dropdown -->
+    <div class="login-container" id="login-container">
+        <div class="login-header">Client Login</div>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 
     <!-- Contact Us Link -->
     <a class="contact-us" href="mailto:kyle@ogqs.co.nz">Contact Us</a>
+
+    <script>
+        // Toggle the login form visibility
+        function toggleLogin() {
+            const loginContainer = document.getElementById('login-container');
+            if (loginContainer.style.display === 'flex') {
+                loginContainer.style.display = 'none';
+            } else {
+                loginContainer.style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html>
