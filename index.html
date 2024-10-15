@@ -23,15 +23,17 @@
             margin-bottom: 40px; /* Space below the logo */
         }
         .login-container {
-            position: absolute; /* Positioning for dropdown */
-            top: 20px; /* Distance from the top */
-            right: 20px; /* Distance from the right */
+            position: fixed; /* Fixed position for popup */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Offset to center */
             display: none; /* Hidden by default */
             flex-direction: column;
-            align-items: flex-end; /* Align text to the right */
+            align-items: center; /* Center text */
             background-color: #000; /* Black background for dropdown */
             padding: 20px; /* Padding for dropdown */
             border-radius: 8px; /* Rounded corners */
+            z-index: 1000; /* Ensure it appears above other content */
         }
         .login-header {
             font-family: 'Hero', sans-serif; /* Hero font */
@@ -104,9 +106,22 @@
             cursor: pointer; /* Pointer cursor on hover */
             font-size: 1em; /* Font size */
             transition: background-color 0.3s ease; /* Smooth hover effect */
+            position: absolute; /* Positioning for button */
+            top: 20px; /* Distance from the top */
+            right: 20px; /* Distance from the right */
         }
         .login-button:hover {
             background-color: #0056b3; /* Darker blue on hover */
+        }
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position for overlay */
+            top: 0; /* Cover the entire screen */
+            left: 0; /* Cover the entire screen */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            z-index: 999; /* Ensure it appears above other content */
         }
     </style>
 </head>
@@ -120,7 +135,10 @@
 
     <!-- Login Button -->
     <button class="login-button" onclick="toggleLogin()">Client Login</button>
-    
+
+    <!-- Overlay for the popup -->
+    <div class="overlay" id="overlay" onclick="toggleLogin()"></div>
+
     <!-- Login Dropdown -->
     <div class="login-container" id="login-container">
         <div class="login-header">Client Login</div>
@@ -138,10 +156,13 @@
         // Toggle the login form visibility
         function toggleLogin() {
             const loginContainer = document.getElementById('login-container');
+            const overlay = document.getElementById('overlay');
             if (loginContainer.style.display === 'flex') {
                 loginContainer.style.display = 'none';
+                overlay.style.display = 'none'; // Hide overlay
             } else {
                 loginContainer.style.display = 'flex';
+                overlay.style.display = 'block'; // Show overlay
             }
         }
     </script>
