@@ -18,8 +18,8 @@
             margin: 0;
         }
         img {
-            max-width: 150px; /* Smaller logo for minimal look */
-            margin-bottom: 40px; /* More space below the logo */
+            max-width: 250px; /* Increased logo size */
+            margin-bottom: 40px; /* Space below the logo */
         }
         h1 { 
             font-family: 'Hero', sans-serif; /* Hero font */
@@ -39,14 +39,17 @@
             padding: 12px; /* Comfortable padding */
             margin: 10px 0; /* Space between inputs */
             border: none; /* Remove border */
-            border-bottom: 2px solid #ccc; /* Simple underline */
-            background: none; /* No background */
+            border-radius: 4px; /* Slightly rounded corners */
+            background-color: #000; /* Black background for inputs */
+            color: #fff; /* White text for contrast */
             font-size: 16px; /* Bigger text for elegance */
-            color: #333; /* Text color */
-            transition: border-color 0.3s ease; /* Smooth border color change */
+            transition: background-color 0.3s ease; /* Smooth background color change */
+        }
+        input::placeholder {
+            color: #999; /* Lighter placeholder text */
         }
         input:focus {
-            border-color: #007BFF; /* Blue underline on focus */
+            background-color: #333; /* Darker black on focus */
             outline: none; /* Remove default focus outline */
         }
         button {
