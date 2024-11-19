@@ -26,21 +26,29 @@
             margin: 40px auto;
             display: block;
         }
-        .about-us {
+        section {
+            padding: 40px 20px;
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 1.2em;
+        }
+        section:nth-child(odd) {
+            background-color: #dcdcdc; /* Alternate section color */
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #000; /* Black headings */
+        }
+        .content {
             max-width: 800px;
-            margin: 0 auto 40px;
+            margin: 0 auto;
             line-height: 1.8;
+            font-size: 1.1em;
         }
         .services {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 40px;
-            padding: 40px 20px;
-            background-color: #dcdcdc; /* Lighter grey section background */
         }
         .service-card {
             flex: 1 1 calc(33% - 40px); /* Three per row with gaps */
@@ -94,30 +102,44 @@
     <!-- Logo -->
     <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
 
-    <!-- About Us Section -->
-    <div class="about-us">
-        Welcome to Owen-Goodall Quantity Surveyors, based in Christchurch, New Zealand. We specialise in providing expert cost management and advisory services to help our clients achieve optimal project outcomes. Our dedicated team is committed to delivering excellence in every aspect of quantity surveying.
-    </div>
+    <!-- Who We Are Section -->
+    <section id="who-we-are">
+        <h2>Who We Are</h2>
+        <div class="content">
+            Welcome to Owen-Goodall Quantity Surveyors, based in Christchurch, New Zealand. We specialise in providing expert cost management and advisory services to help our clients achieve optimal project outcomes. Our dedicated team is committed to delivering excellence in every aspect of quantity surveying.
+        </div>
+    </section>
 
-    <!-- Services Section -->
-    <div class="services">
-        <div class="service-card">
-            <h3>Cost Planning & Management</h3>
-            <p>From feasibility cost appraisals to tender estimates and value engineering, we provide comprehensive cost planning and management to optimise your project's financial outcomes.</p>
+    <!-- Our Services Section -->
+    <section id="our-services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Cost Planning & Management</h3>
+                <p>Feasibility cost appraisals, value engineering, tender estimates, and cost reporting for optimal project outcomes.</p>
+            </div>
+            <div class="service-card">
+                <h3>Contract Administration</h3>
+                <p>Procurement, pre-contract negotiations, tendering, and contractor appointments to streamline your projects.</p>
+            </div>
+            <div class="service-card">
+                <h3>Insurance Services</h3>
+                <p>Reinstatement valuations, repair estimates, and expert support during insurance claim negotiations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Bank Finance Reporting</h3>
+                <p>Detailed project risk assessments, feasibility reviews, and drawdown reporting to secure financial milestones.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <h3>Contract Administration</h3>
-            <p>We assist with procurement, pre-contract negotiations, and tendering to ensure smooth project execution and successful contractor appointments.</p>
+    </section>
+
+    <!-- Our Clients Section -->
+    <section id="our-clients">
+        <h2>Our Clients</h2>
+        <div class="content">
+            We are proud to have worked with a diverse range of clients across industries, from residential and commercial developers to insurance providers and financial institutions. Our commitment to excellence ensures that every client receives tailored, high-quality service to meet their specific project needs.
         </div>
-        <div class="service-card">
-            <h3>Insurance Services</h3>
-            <p>Our team provides reinstatement valuations, repair valuations, and expert support during claim negotiations to simplify the insurance process for you.</p>
-        </div>
-        <div class="service-card">
-            <h3>Bank Finance Reporting</h3>
-            <p>We offer detailed financial reporting, project risk assessments, and drawdown reporting to help clients secure and manage bank finance effectively.</p>
-        </div>
-    </div>
+    </section>
 
     <!-- Contact Us Button -->
     <a class="contact-us" href="mailto:kyle@ogqs.co.nz">Contact Us</a>
