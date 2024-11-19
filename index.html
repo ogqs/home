@@ -18,8 +18,8 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #2c2c2c; /* Dark background */
-            color: #fff;
+            background-color: #949494; /* Light grey background */
+            color: #333;
         }
         img {
             max-width: 250px;
@@ -40,16 +40,15 @@
             justify-content: center;
             gap: 40px;
             padding: 40px 20px;
-            background-color: #1f1f1f; /* Slightly lighter section background */
         }
         .service-card {
-            flex: 1 1 calc(33% - 40px); /* Three per row with gaps */
-            max-width: 300px;
-            background-color: #333;
+            flex: 1 1 calc(45% - 40px); /* Two cards per row with gaps */
+            max-width: 500px;
+            background-color: #fff; /* White background for card */
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .service-card:hover {
@@ -59,20 +58,23 @@
         .service-card h3 {
             font-size: 1.4em;
             margin-bottom: 15px;
-            color: #ffcc00; /* Accent color */
+            color: #000; /* Black headings */
         }
-        .service-card p {
-            font-size: 0.95em;
-            line-height: 1.6;
-            color: #ddd;
+        .service-card ul {
+            padding-left: 20px;
+            color: #444;
+        }
+        .service-card ul li {
+            margin-bottom: 10px;
+            line-height: 1.5;
         }
         .contact-us {
             display: block;
             width: fit-content;
             margin: 40px auto;
             text-align: center;
-            background-color: #ffcc00; /* Accent color */
-            color: #000;
+            background-color: #000;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             padding: 12px 30px;
@@ -80,8 +82,7 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .contact-us:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: #333;
         }
         .copyright {
             text-align: center;
@@ -104,19 +105,42 @@
     <div class="services">
         <div class="service-card">
             <h3>Cost Planning & Management</h3>
-            <p>From feasibility cost appraisals to tender estimates and value engineering, we provide comprehensive cost planning and management to optimise your project's financial outcomes.</p>
+            <ul>
+                <li>Feasibility cost appraisals for early-stage projects</li>
+                <li>Preliminary and developed design cost estimates</li>
+                <li>Value engineering to optimise project outcomes</li>
+                <li>Procurement strategies and pre-tender estimates</li>
+                <li>Tender reviews and contractor appointments</li>
+                <li>Payment claim valuations</li>
+                <li>Variation and cost management</li>
+                <li>Construction cost reporting</li>
+                <li>Extension of time claims</li>
+                <li>Final account settlement</li>
+            </ul>
         </div>
         <div class="service-card">
             <h3>Contract Administration</h3>
-            <p>We assist with procurement, pre-contract negotiations, and tendering to ensure smooth project execution and successful contractor appointments.</p>
+            <ul>
+                <li>Procurement and contract selection</li>
+                <li>Pre-contract negotiations and tendering</li>
+            </ul>
         </div>
         <div class="service-card">
             <h3>Insurance Services</h3>
-            <p>Our team provides reinstatement valuations, repair valuations, and expert support during claim negotiations to simplify the insurance process for you.</p>
+            <ul>
+                <li>Insurance reinstatement valuations</li>
+                <li>Repair and rebuild valuations for insurance purposes</li>
+                <li>QS monitoring for insurance-managed repair projects</li>
+                <li>Support during insurance claim settlement negotiations</li>
+            </ul>
         </div>
         <div class="service-card">
             <h3>Bank Finance Reporting</h3>
-            <p>We offer detailed financial reporting, project risk assessments, and drawdown reporting to help clients secure and manage bank finance effectively.</p>
+            <ul>
+                <li>Initial project reporting and feasibility reviews</li>
+                <li>Project risk assessments</li>
+                <li>Drawdown reporting to support financial milestones</li>
+            </ul>
         </div>
     </div>
 
