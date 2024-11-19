@@ -23,7 +23,7 @@
             align-items: center; 
             font-family: 'Poppins', sans-serif; /* Modern font */
             background-color: #949494; /* Background color */
-            color: #333; /* Text color */
+            color: #fff; /* White text */
             margin: 0;
         }
         img {
@@ -31,39 +31,39 @@
             margin-bottom: 40px; /* Space below the logo */
         }
         .about-us {
-            margin-bottom: 20px; /* Space between About Us and Services */
-            color: #fff; /* White text */
-            font-size: 1em; /* Standard font size for About Us text */
-            max-width: 500px; /* Limit the width for readability */
+            margin-bottom: 40px; /* Space between About Us and Services */
+            font-size: 1.1em; /* Slightly larger font size for About Us text */
+            max-width: 600px; /* Limit the width for readability */
             text-align: center; /* Centered text */
             line-height: 1.6; /* Better readability */
         }
         .services {
-            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to fit smaller screens */
+            justify-content: space-between;
+            gap: 20px;
+            width: 90%; /* Take most of the screen width */
+            margin: 40px 0;
+        }
+        .service-category {
+            flex: 1 1 calc(50% - 20px); /* Two columns, adjust spacing */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
             padding: 20px;
-            background-color: #f9f9f9; /* Light grey background */
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 80%; /* Adjust width as necessary */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
-        .services h2 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: #000; /* Black text for the heading */
-            text-align: center;
-        }
-        .services h3 {
+        .service-category h3 {
             font-size: 1.4em;
-            margin-top: 20px;
-            color: #333; /* Dark grey for subheadings */
+            margin-bottom: 15px;
+            color: #fff; /* White for subheadings */
         }
-        .services ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        .service-category ul {
+            list-style-type: none; /* No bullet points */
+            padding: 0;
         }
-        .services ul li {
+        .service-category ul li {
             margin-bottom: 10px;
-            color: #555; /* Slightly lighter grey for the list items */
+            color: #ddd; /* Lighter grey for list items */
         }
         .login-button {
             background-color: #000; /* Black button */
@@ -84,7 +84,6 @@
         .copyright {
             margin-top: 20px; /* Space above copyright */
             text-align: center; /* Center the text */
-            color: #333; /* Grey text color */
             font-size: 0.9em; /* Smaller font size */
         }
     </style>
@@ -99,8 +98,7 @@
 
     <!-- Services Section -->
     <div class="services">
-        <h2>Our Services</h2>
-        <div>
+        <div class="service-category">
             <h3>Cost Planning & Management</h3>
             <ul>
                 <li>Feasibility cost appraisals for early-stage projects</li>
@@ -110,19 +108,16 @@
                 <li>Tender reviews and contractor appointments</li>
                 <li>Payment claim valuations</li>
                 <li>Variation and cost management</li>
-                <li>Construction cost reporting</li>
-                <li>Extension of time claims</li>
-                <li>Final account settlement</li>
             </ul>
         </div>
-        <div>
+        <div class="service-category">
             <h3>Contract Administration</h3>
             <ul>
                 <li>Procurement and contract selection</li>
                 <li>Pre-contract negotiations and tendering</li>
             </ul>
         </div>
-        <div>
+        <div class="service-category">
             <h3>Insurance Services</h3>
             <ul>
                 <li>Insurance reinstatement valuations</li>
@@ -131,7 +126,7 @@
                 <li>Support during insurance claim settlement negotiations</li>
             </ul>
         </div>
-        <div>
+        <div class="service-category">
             <h3>Bank Finance Reporting</h3>
             <ul>
                 <li>Initial project reporting and feasibility reviews</li>
