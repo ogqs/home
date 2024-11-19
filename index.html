@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OGQS</title> <!-- Updated tab title -->
+    <title>OGQS</title>
 
     <!-- Meta description for SEO -->
     <meta name="description" content="Owen-Goodall Quantity Surveyors offers expert cost management and construction advisory services in Christchurch, New Zealand. Contact us for optimal project outcomes.">
@@ -15,104 +15,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Hero&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
-        /* General body styles */
-        body { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            font-family: 'Poppins', sans-serif; /* Modern font */
-            background-color: #949494; /* Background color */
-            color: #fff; /* White text */
+        body {
             margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #2c2c2c; /* Dark background */
+            color: #fff;
         }
         img {
-            max-width: 250px; /* Logo size */
-            margin-bottom: 40px; /* Space below the logo */
+            max-width: 250px;
+            margin: 40px auto;
+            display: block;
         }
         .about-us {
-            margin-bottom: 40px; /* Space between About Us and Services */
-            font-size: 1.1em; /* Slightly larger font size for About Us text */
-            max-width: 600px; /* Limit the width for readability */
-            text-align: center; /* Centered text */
-            line-height: 1.6; /* Better readability */
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
         }
         .services {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%; /* Take most of the screen width */
-            margin: 40px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 20px;
+            background-color: #1f1f1f; /* Slightly lighter section background */
         }
-        .service-category {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px; /* Limit width for larger screens */
-            margin-bottom: 40px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-            padding: 20px 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        .service-card {
+            flex: 1 1 calc(33% - 40px); /* Three per row with gaps */
+            max-width: 300px;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .service-category h3 {
-            font-size: 1.6em;
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        }
+        .service-card h3 {
+            font-size: 1.4em;
             margin-bottom: 15px;
-            color: #fff; /* White for subheadings */
-            text-align: center;
+            color: #ffcc00; /* Accent color */
         }
-        .service-category p {
-            font-size: 1em;
-            color: #ddd; /* Lighter grey for descriptions */
-            text-align: center;
-            line-height: 1.5;
-            max-width: 800px; /* Limit text width */
+        .service-card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #ddd;
         }
         .contact-us {
-            margin-top: 20px; /* Space above the link */
-            color: #fff; /* White text */
-            text-decoration: none; /* No underline */
-            font-size: 1.1em; /* Slightly larger font size */
-            font-weight: bold; /* Bold for emphasis */
-            padding: 10px 20px; /* Padding for better click area */
-            border: 2px solid #fff; /* White border */
-            border-radius: 5px; /* Rounded corners */
-            transition: background-color 0.3s ease; /* Smooth hover effect */
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            text-align: center;
+            background-color: #ffcc00; /* Accent color */
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .contact-us:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Light white background on hover */
+            background-color: #fff;
+            color: #000;
         }
         .copyright {
-            margin-top: 20px; /* Space above copyright */
-            text-align: center; /* Center the text */
-            font-size: 0.9em; /* Smaller font size */
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo"> 
+    <!-- Logo -->
+    <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
 
     <!-- About Us Section -->
     <div class="about-us">
-        <p>Welcome to Owen-Goodall Quantity Surveyors, based in Christchurch, New Zealand. We specialise in providing expert cost management and advisory services to help our clients achieve optimal project outcomes. Our dedicated team is committed to delivering excellence in every aspect of quantity surveying.</p>
+        Welcome to Owen-Goodall Quantity Surveyors, based in Christchurch, New Zealand. We specialise in providing expert cost management and advisory services to help our clients achieve optimal project outcomes. Our dedicated team is committed to delivering excellence in every aspect of quantity surveying.
     </div>
 
     <!-- Services Section -->
     <div class="services">
-        <div class="service-category">
+        <div class="service-card">
             <h3>Cost Planning & Management</h3>
             <p>From feasibility cost appraisals to tender estimates and value engineering, we provide comprehensive cost planning and management to optimise your project's financial outcomes.</p>
         </div>
-        <div class="service-category">
+        <div class="service-card">
             <h3>Contract Administration</h3>
             <p>We assist with procurement, pre-contract negotiations, and tendering to ensure smooth project execution and successful contractor appointments.</p>
         </div>
-        <div class="service-category">
+        <div class="service-card">
             <h3>Insurance Services</h3>
             <p>Our team provides reinstatement valuations, repair valuations, and expert support during claim negotiations to simplify the insurance process for you.</p>
         </div>
-        <div class="service-category">
+        <div class="service-card">
             <h3>Bank Finance Reporting</h3>
             <p>We offer detailed financial reporting, project risk assessments, and drawdown reporting to help clients secure and manage bank finance effectively.</p>
         </div>
@@ -121,7 +123,7 @@
     <!-- Contact Us Button -->
     <a class="contact-us" href="mailto:kyle@ogqs.co.nz">Contact Us</a>
 
-    <!-- Copyright Notice -->
+    <!-- Copyright -->
     <div class="copyright">
         &copy; 2024 Owen-Goodall Quantity Surveyors. All rights reserved.
     </div>
