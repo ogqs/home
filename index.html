@@ -19,12 +19,12 @@
         body { 
             display: flex; 
             flex-direction: column; 
-            justify-content: center; 
             align-items: center; 
             font-family: 'Poppins', sans-serif; /* Modern font */
             background-color: #949494; /* Background color */
             color: #fff; /* White text */
             margin: 0;
+            padding: 0;
         }
         img {
             max-width: 250px; /* Logo size */
@@ -39,47 +39,49 @@
         }
         .services {
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping to fit smaller screens */
-            justify-content: space-between;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
             width: 90%; /* Take most of the screen width */
             margin: 40px 0;
         }
         .service-category {
-            flex: 1 1 calc(50% - 20px); /* Two columns, adjust spacing */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Limit width for larger screens */
+            margin-bottom: 40px;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-            padding: 20px;
+            padding: 20px 40px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
         .service-category h3 {
-            font-size: 1.4em;
+            font-size: 1.6em;
             margin-bottom: 15px;
             color: #fff; /* White for subheadings */
+            text-align: center;
         }
-        .service-category ul {
-            list-style-type: none; /* No bullet points */
-            padding: 0;
+        .service-category p {
+            font-size: 1em;
+            color: #ddd; /* Lighter grey for descriptions */
+            text-align: center;
+            line-height: 1.5;
+            max-width: 800px; /* Limit text width */
         }
-        .service-category ul li {
-            margin-bottom: 10px;
-            color: #ddd; /* Lighter grey for list items */
-        }
-        .login-button {
-            background-color: #000; /* Black button */
-            color: white; /* White text */
-            padding: 10px 15px; /* Padding for the button */
-            border: none; /* No border */
+        .contact-us {
+            margin-top: 20px; /* Space above the link */
+            color: #fff; /* White text */
+            text-decoration: none; /* No underline */
+            font-size: 1.1em; /* Slightly larger font size */
+            font-weight: bold; /* Bold for emphasis */
+            padding: 10px 20px; /* Padding for better click area */
+            border: 2px solid #fff; /* White border */
             border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
-            font-size: 1em; /* Font size */
             transition: background-color 0.3s ease; /* Smooth hover effect */
-            position: absolute; /* Positioning for button */
-            top: 20px; /* Distance from the top */
-            right: 20px; /* Distance from the right */
         }
-        .login-button:hover {
-            background-color: #333; /* Slightly lighter black on hover */
+        .contact-us:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Light white background on hover */
         }
         .copyright {
             margin-top: 20px; /* Space above copyright */
@@ -100,44 +102,24 @@
     <div class="services">
         <div class="service-category">
             <h3>Cost Planning & Management</h3>
-            <ul>
-                <li>Feasibility cost appraisals for early-stage projects</li>
-                <li>Preliminary and developed design cost estimates</li>
-                <li>Value engineering to optimise project outcomes</li>
-                <li>Procurement strategies and pre-tender estimates</li>
-                <li>Tender reviews and contractor appointments</li>
-                <li>Payment claim valuations</li>
-                <li>Variation and cost management</li>
-            </ul>
+            <p>From feasibility cost appraisals to tender estimates and value engineering, we provide comprehensive cost planning and management to optimise your project's financial outcomes.</p>
         </div>
         <div class="service-category">
             <h3>Contract Administration</h3>
-            <ul>
-                <li>Procurement and contract selection</li>
-                <li>Pre-contract negotiations and tendering</li>
-            </ul>
+            <p>We assist with procurement, pre-contract negotiations, and tendering to ensure smooth project execution and successful contractor appointments.</p>
         </div>
         <div class="service-category">
             <h3>Insurance Services</h3>
-            <ul>
-                <li>Insurance reinstatement valuations</li>
-                <li>Repair and rebuild valuations for insurance purposes</li>
-                <li>QS monitoring for insurance-managed repair projects</li>
-                <li>Support during insurance claim settlement negotiations</li>
-            </ul>
+            <p>Our team provides reinstatement valuations, repair valuations, and expert support during claim negotiations to simplify the insurance process for you.</p>
         </div>
         <div class="service-category">
             <h3>Bank Finance Reporting</h3>
-            <ul>
-                <li>Initial project reporting and feasibility reviews</li>
-                <li>Project risk assessments</li>
-                <li>Drawdown reporting to support financial milestones</li>
-            </ul>
+            <p>We offer detailed financial reporting, project risk assessments, and drawdown reporting to help clients secure and manage bank finance effectively.</p>
         </div>
     </div>
 
-    <!-- Client Login Button -->
-    <button class="login-button" onclick="toggleLogin()">Client Login</button>
+    <!-- Contact Us Button -->
+    <a class="contact-us" href="mailto:kyle@ogqs.co.nz">Contact Us</a>
 
     <!-- Copyright Notice -->
     <div class="copyright">
