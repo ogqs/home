@@ -15,29 +15,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f0f0; /* Light grey background */
-            color: #333; /* Dark grey text */
+            background-color: #f0f0f0;
+            color: #333;
         }
-        img {
-            max-width: 250px;
-            margin: 40px auto;
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #444;
+            color: #fff;
+        }
+        header img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .carousel {
+            max-width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel img {
+            width: 100%;
             display: block;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
         section {
             padding: 40px 20px;
             text-align: center;
         }
         section:nth-child(odd) {
-            background-color: #dcdcdc; /* Light grey alternating sections */
+            background-color: #dcdcdc;
         }
         h2 {
             font-size: 1.4em;
             margin-bottom: 20px;
-            color: #444; /* Dark grey for headings */
+            color: #444;
             font-family: 'Quicksand', sans-serif;
         }
         .content {
@@ -45,7 +83,7 @@
             margin: 0 auto;
             line-height: 1.8;
             font-size: 0.95em;
-            color: #555; /* Slightly lighter grey text */
+            color: #555;
         }
         .services {
             display: flex;
@@ -54,9 +92,9 @@
             gap: 40px;
         }
         .service-card {
-            flex: 1 1 calc(33% - 40px); /* Three per row with gaps */
+            flex: 1 1 calc(33% - 40px);
             max-width: 300px;
-            background-color: #e5e5e5; /* Light card background */
+            background-color: #e5e5e5;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -70,19 +108,24 @@
         .service-card h3 {
             font-size: 1.1em;
             margin-bottom: 15px;
-            color: #444; /* Dark grey headings */
+            color: #444;
+        }
+        .service-card i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #555;
         }
         .service-card p {
             font-size: 0.95em;
             line-height: 1.6;
-            color: #555; /* Medium grey text */
+            color: #555;
         }
         .contact-us {
             display: block;
             width: fit-content;
             margin: 40px auto;
             text-align: center;
-            background-color: #333; /* Dark grey button */
+            background-color: #333;
             color: #fff;
             text-decoration: none;
             font-weight: bold;
@@ -97,30 +140,44 @@
             text-align: center;
             margin: 20px 0;
             font-size: 0.9em;
-            color: #888; /* Lighter grey text */
+            color: #888;
         }
         @media (max-width: 768px) {
             .services {
-                flex-direction: column; /* Stack the service cards vertically */
-                gap: 20px; /* Reduce the gap between cards */
+                flex-direction: column;
+                gap: 20px;
             }
             .service-card {
-                flex: 1 1 100%; /* Make each card take full width */
-                max-width: 100%; /* Remove the max-width constraint */
-                margin: 0 auto; /* Center the cards */
+                flex: 1 1 100%;
+                max-width: 100%;
+                margin: 0 auto;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Logo -->
-    <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
+    <!-- Header with logo -->
+    <header>
+        <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
+        <h1>Owen-Goodall Quantity Surveyors</h1>
+    </header>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+        <img src="slide1.jpg" alt="Project Image 1">
+        <img src="slide2.jpg" alt="Project Image 2">
+        <img src="slide3.jpg" alt="Project Image 3">
+        <div class="carousel-controls">
+            <button class="carousel-button" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-button" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
 
     <!-- Who We Are Section -->
     <section id="who-we-are">
         <h2>Who We Are</h2>
         <div class="content">
-            At Owen-Goodall Quantity Surveyors, we're a friendly team based in Christchurch, New Zealand, passionate about helping you make your projects a success! From the first idea to the final finish, we're here to guide you through every step. We focus on delivering accurate and personalised services that make your life easier, so you can enjoy the journey as much as the outcome!
+            At Owen-Goodall Quantity Surveyors, we're a friendly team based in Christchurch, New Zealand, passionate about helping you make your projects a success! From the first idea to the final finish, we're here to guide you through every step.
         </div>
     </section>
 
@@ -129,41 +186,20 @@
         <h2>Our Services</h2>
         <div class="services">
             <div class="service-card">
+                <i class="fas fa-chart-line"></i>
                 <h3>Cost Planning & Management</h3>
-                <p>Let’s ensure your budget works as hard as you do! From early appraisals to detailed tender estimates, we’ll keep your project on track and your costs in check.</p>
+                <p>From early appraisals to tender estimates, we’ll keep your project on track.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-file-alt"></i>
                 <h3>Contract Administration</h3>
-                <p>We handle the paperwork so you don’t have to. From progress claims to final accounts, leave the details to us and focus on your project’s success.</p>
+                <p>Leave the paperwork to us and focus on your project’s success.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
                 <h3>Insurance Services</h3>
-                <p>Rest easy with our expert insurance support. From reinstatement valuations to claims advice, we’ll ensure your assets are protected.</p>
+                <p>From valuations to claims advice, we’ll protect your assets.</p>
             </div>
-            <div class="service-card">
-                <h3>Bank Finance Reporting</h3>
-                <p>We’ll keep your project moving with accurate financial reports tailored for banks, making milestone approvals smooth and hassle-free.</p>
-            </div>
-            <div class="service-card">
-                <h3>Project Feasibility & Advice</h3>
-                <p>Thinking of starting a new project? We’ll guide you through cost analyses and feasibility studies to set you up for success.</p>
-            </div>
-            <div class="service-card">
-                <h3>Renovation & Rebuild Estimates</h3>
-                <p>Whether it’s a refresh or a full rebuild, we’ll provide clear, detailed estimates to bring your vision to life without surprises.</p>
-            </div>
-            <div class="service-card">
-                <h3>Procurement Advice</h3>
-                <p>Navigating contracts and suppliers? Let us help you choose the right partners and procurement strategies for your project.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Clients Section -->
-    <section id="our-clients">
-        <h2>Our Clients</h2>
-        <div class="content">
-            We're proud to work with a fantastic mix of clients – from builders and homeowners to subcontractors. Whether you're building your dream home, or planning exciting renovations, we're here to help every step of the way. With our friendly support, you can count on us to meet all your project needs with care, attention, and a touch of professionalism!
         </div>
     </section>
 
@@ -174,5 +210,30 @@
     <div class="copyright">
         &copy; 2024 Owen-Goodall Quantity Surveyors. All rights reserved.
     </div>
+
+    <!-- Carousel JavaScript -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
 </body>
 </html>
