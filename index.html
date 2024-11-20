@@ -18,266 +18,177 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
     <style>
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f0f0f0;
             color: #333;
-            overflow-x: hidden;
         }
-
-        /* Header with Logo */
-        header {
-            background-color: #0d3b66; /* Blue color */
-            color: white;
-            padding: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            animation: fadeIn 2s ease-in-out;
+        img {
+            max-width: 250px;
+            margin: 40px auto;
+            display: block;
         }
-
-        /* Logo animation */
-        .logo img {
-            height: 80px;
-            opacity: 0;
-            animation: logoAnimation 1s forwards;
-        }
-
-        @keyframes logoAnimation {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            background-image: url('your-hero-image.jpg'); /* Add your hero image */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            animation: fadeInUp 2s ease-out;
-        }
-
-        .hero .contact-btn {
-            background-color: #f4a261;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-size: 1.2em;
-            text-decoration: none;
-            font-weight: bold;
-            animation: fadeInUp 2s ease-out;
-        }
-
-        .hero .contact-btn:hover {
-            background-color: #e76f51;
-        }
-
-        /* Services Section */
         section {
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
-
-        section h2 {
-            font-size: 2.2em;
-            margin-bottom: 40px;
-            color: #333;
-            text-transform: uppercase;
-            font-weight: bold;
+        section:nth-child(odd) {
+            background-color: #dcdcdc;
         }
-
-        /* Photo Gallery Layout */
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 20px;
-            margin-top: 30px;
+        h2 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #444;
+            font-family: 'Quicksand', sans-serif;
         }
-
-        .photo-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 0.95em;
+            color: #555;
         }
-
-        .photo-card:hover {
-            transform: scale(1.05);
-        }
-
-        .photo-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 0.3s ease;
-        }
-
-        .photo-card .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .services {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            text-align: center;
+            gap: 40px;
+        }
+        .service-card {
+            flex: 1 1 calc(33% - 40px);
+            max-width: 300px;
+            background-color: #e5e5e5;
+            border-radius: 10px;
             padding: 20px;
-        }
-
-        .photo-card:hover .overlay {
-            opacity: 1;
-        }
-
-        .photo-card .overlay h3 {
-            font-size: 1.5em;
-            margin: 0;
-        }
-
-        .photo-card .overlay p {
-            font-size: 1.1em;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             text-align: center;
-            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        footer a {
-            color: #f4a261;
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        }
+        .service-card h3 {
+            font-size: 1.1em;
+            margin: 15px 0;
+            color: #444;
+        }
+        .service-card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .service-card i {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .contact-us {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-
-        footer a:hover {
-            color: #e76f51;
+        .contact-us:hover {
+            background-color: #555;
         }
-
+        .copyright {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #888;
+        }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
+            .services {
+                flex-direction: column;
+                gap: 20px;
             }
-
-            .hero p {
-                font-size: 1.2em;
+            .service-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+                margin: 0 auto;
             }
-        }
-
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <!-- Header with Logo -->
-    <header>
-        <div class="logo">
-            <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
-        </div>
-    </header>
+    <!-- Logo -->
+    <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Owen-Goodall Quantity Surveyors</h1>
-        <p>Your trusted partner for cost management and project advisory in Christchurch, New Zealand.</p>
-        <a href="#contact" class="contact-btn">Contact Us</a>
+    <!-- Who We Are Section -->
+    <section id="who-we-are">
+        <h2>Who We Are</h2>
+        <div class="content">
+            At Owen-Goodall Quantity Surveyors, we're a friendly team based in Christchurch, New Zealand, passionate about helping you make your projects a success! From the first idea to the final finish, we're here to guide you through every step. We focus on delivering accurate and personalised services that make your life easier, so you can enjoy the journey as much as the outcome!
+        </div>
     </section>
 
-    <!-- Our Services Section (Photo Gallery) -->
+    <!-- Our Services Section -->
     <section id="our-services">
         <h2>Our Services</h2>
-        <div class="photo-gallery">
-            <div class="photo-card">
-                <img src="service1.jpg" alt="Cost Planning">
-                <div class="overlay">
-                    <h3>Cost Planning & Management</h3>
-                    <p>Ensuring your project stays on budget and on track.</p>
-                </div>
+        <div class="services">
+            <div class="service-card">
+                <i class="fa-solid fa-calculator"></i>
+                <h3>Cost Planning & Management</h3>
+                <p>Let’s ensure your budget works as hard as you do! From early appraisals to detailed tender estimates, we’ll keep your project on track and your costs in check.</p>
             </div>
-            <div class="photo-card">
-                <img src="service2.jpg" alt="Contract Administration">
-                <div class="overlay">
-                    <h3>Contract Administration</h3>
-                    <p>We handle contracts, claims, and progress reports.</p>
-                </div>
+            <div class="service-card">
+                <i class="fa-solid fa-file-contract"></i>
+                <h3>Contract Administration</h3>
+                <p>We handle the paperwork so you don’t have to. From progress claims to final accounts, leave the details to us and focus on your project’s success.</p>
             </div>
-            <div class="photo-card">
-                <img src="service3.jpg" alt="Insurance Services">
-                <div class="overlay">
-                    <h3>Insurance Services</h3>
-                    <p>Protect your assets with our expert advice.</p>
-                </div>
+            <div class="service-card">
+                <i class="fa-solid fa-shield-alt"></i>
+                <h3>Insurance Services</h3>
+                <p>Rest easy with our expert insurance support. From reinstatement valuations to claims advice, we’ll ensure your assets are protected.</p>
             </div>
-            <div class="photo-card">
-                <img src="service4.jpg" alt="Bank Finance">
-                <div class="overlay">
-                    <h3>Bank Finance Reporting</h3>
-                    <p>Providing clear financial reports for project financing.</p>
-                </div>
+            <div class="service-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Bank Finance Reporting</h3>
+                <p>We’ll keep your project moving with accurate financial reports tailored for banks, making milestone approvals smooth and hassle-free.</p>
             </div>
-            <div class="photo-card">
-                <img src="service5.jpg" alt="Project Feasibility">
-                <div class="overlay">
-                    <h3>Project Feasibility & Advice</h3>
-                    <p>We provide expert advice to help guide your decisions.</p>
-                </div>
+            <div class="service-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Project Feasibility & Advice</h3>
+                <p>Thinking of starting a new project? We’ll guide you through cost analyses and feasibility studies to set you up for success.</p>
             </div>
-            <div class="photo-card">
-                <img src="service6.jpg" alt="Renovation & Rebuild">
-                <div class="overlay">
-                    <h3>Renovation & Rebuild Estimates</h3>
-                    <p>Clear estimates for your renovation or rebuild project.</p>
-                </div>
+            <div class="service-card">
+                <i class="fa-solid fa-home"></i>
+                <h3>Renovation & Rebuild Estimates</h3>
+                <p>Whether it’s a refresh or a full rebuild, we’ll provide clear, detailed estimates to bring your vision to life without surprises.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Procurement Advice</h3>
+                <p>Navigating contracts and suppliers? Let us help you choose the right partners and procurement strategies for your project.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
+    <!-- Our Clients Section -->
+    <section id="our-clients">
+        <h2>Our Clients</h2>
         <div class="content">
-            Ready to get started or need advice on your project? Reach out to us today!
+            We're proud to work with a fantastic mix of clients – from builders and homeowners to subcontractors. Whether you're building your dream home, or planning exciting renovations, we're here to help every step of the way. With our friendly support, you can count on us to meet all your project needs with care, attention, and a touch of professionalism!
         </div>
-        <a href="mailto:kyle@ogqs.co.nz" class="contact-btn">Get in Touch</a>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Owen-Goodall Quantity Surveyors. All rights reserved.</p>
-    </footer>
+    <!-- Contact Us Button -->
+    <a class="contact-us" href="mailto:kyle@ogqs.co.nz">Contact OGQS</a>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        &copy; 2024 Owen-Goodall Quantity Surveyors. All rights reserved.
+    </div>
 </body>
 </html>
+
