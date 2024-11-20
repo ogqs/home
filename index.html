@@ -19,11 +19,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <style>
+        /* General Body Styles */
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #f0f7ff; /* Light blue background */
+            color: #2a4d6d; /* Dark blue text */
         }
         img {
             max-width: 250px;
@@ -35,12 +36,12 @@
             text-align: center;
         }
         section:nth-child(odd) {
-            background-color: #dcdcdc;
+            background-color: #e1f1ff; /* Light blue for alternating sections */
         }
         h2 {
             font-size: 1.4em;
             margin-bottom: 20px;
-            color: #444;
+            color: #1d3c53; /* Slightly darker blue for headings */
             font-family: 'Quicksand', sans-serif;
         }
         .content {
@@ -48,8 +49,10 @@
             margin: 0 auto;
             line-height: 1.8;
             font-size: 0.95em;
-            color: #555;
+            color: #2a4d6d;
         }
+
+        /* Service Cards */
         .services {
             display: flex;
             flex-wrap: wrap;
@@ -59,38 +62,41 @@
         .service-card {
             flex: 1 1 calc(33% - 40px);
             max-width: 300px;
-            background-color: #e5e5e5;
+            background-color: #e6f7ff; /* Soft blue card background */
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            background-color: #b3e0ff; /* Darker blue on hover */
         }
         .service-card h3 {
             font-size: 1.1em;
             margin: 15px 0;
-            color: #444;
+            color: #1d3c53;
         }
         .service-card p {
             font-size: 0.95em;
             line-height: 1.6;
-            color: #555;
+            color: #2a4d6d;
         }
         .service-card i {
             font-size: 2.5em;
-            color: #333;
+            color: #2a4d6d;
             margin-bottom: 10px;
         }
+
+        /* Contact Us Button */
         .contact-us {
             display: block;
             width: fit-content;
             margin: 40px auto;
             text-align: center;
-            background-color: #333;
+            background-color: #1d3c53; /* Dark blue button */
             color: #fff;
             text-decoration: none;
             font-weight: bold;
@@ -99,14 +105,18 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .contact-us:hover {
-            background-color: #555;
+            background-color: #142a3d; /* Darker blue on hover */
         }
+
+        /* Footer Styles */
         .copyright {
             text-align: center;
             margin: 20px 0;
             font-size: 0.9em;
-            color: #888;
+            color: #5a7d96; /* Lighter blue text */
         }
+
+        /* Mobile Styles */
         @media (max-width: 768px) {
             .services {
                 flex-direction: column;
