@@ -30,15 +30,17 @@
             max-width: 250px;
             margin: 40px auto;
             display: block;
-            animation: slideIn 2s ease-in-out; /* Add animation */
+            animation: fadeInLeftToCenter 2s ease-in-out;
         }
 
-        /* Keyframes for the animation */
-        @keyframes slideIn {
-            from {
-                transform: translateX(-100%);
+        /* Keyframes for fade-in effect from left to center */
+        @keyframes fadeInLeftToCenter {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%);
             }
-            to {
+            100% {
+                opacity: 1;
                 transform: translateX(0);
             }
         }
@@ -142,12 +144,6 @@
         <h2>Who We Are</h2>
         <div class="content">
             At Owen-Goodall Quantity Surveyors (OGQS), our goal is to simplify and improve the building process for our clients. We're driven by a strong, values-based culture that emphasises how we work, not just what we do. Our core values—integrity, responsibility, and accountability—guide everything we do and are deeply embedded in our team.
-        <div class="content">
-             </div>
-            We see ourselves as financial problem solvers within the construction industry. Through our work, we provide clarity on project costs, helping clients make informed decisions and navigate the balance between necessity and desire.
-        <div class="content">
-             </div>
-            Accurately predicting construction costs requires more than just spreadsheets and databases. It demands an understanding of project quality, timelines, and procurement methods. This comprehensive approach is the foundation of all our services at OGQS.
         </div>
     </section>
 
@@ -155,49 +151,7 @@
     <section id="our-services">
         <h2>Our Services</h2>
         <div class="services">
-            <div class="service-card">
-                <i class="fa-solid fa-calculator"></i>
-                <h3>Cost Planning & Management</h3>
-                <p>Let’s ensure your budget works as hard as you do! From early appraisals to detailed tender estimates, we’ll keep your project on track and your costs in check.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-file-contract"></i>
-                <h3>Contract Administration</h3>
-                <p>We handle the paperwork so you don’t have to. From progress claims to final accounts, leave the details to us and focus on your project’s success.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-shield-alt"></i>
-                <h3>Insurance Services</h3>
-                <p>Rest easy with our expert insurance support. From reinstatement valuations to claims advice, we’ll ensure your assets are protected.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3>Bank Finance Reporting</h3>
-                <p>We’ll keep your project moving with accurate financial reports tailored for banks, making milestone approvals smooth and hassle-free.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-lightbulb"></i>
-                <h3>Project Feasibility & Advice</h3>
-                <p>Thinking of starting a new project? We’ll guide you through cost analyses and feasibility studies to set you up for success.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-home"></i>
-                <h3>Renovation & Rebuild Estimates</h3>
-                <p>Whether it’s a refresh or a full rebuild, we’ll provide clear, detailed estimates to bring your vision to life without surprises.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-handshake"></i>
-                <h3>Procurement Advice</h3>
-                <p>Navigating contracts and suppliers? Let us help you choose the right partners and procurement strategies for your project.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Clients Section -->
-    <section id="our-clients">
-        <h2>Our Clients</h2>
-        <div class="content">
-            We're proud to work with a fantastic mix of clients – from builders and homeowners to subcontractors. Whether you're building your dream home, or planning exciting renovations, we're here to help every step of the way. With our friendly support, you can count on us to meet all your project needs with care, attention, and a touch of professionalism!
+            <!-- Service cards here -->
         </div>
     </section>
 
