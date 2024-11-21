@@ -1,106 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OGQS - Expert Quantity Surveyors</title>
+    <title>OGQS</title>
 
     <!-- Meta description for SEO -->
     <meta name="description" content="Owen-Goodall Quantity Surveyors offers expert cost management and construction advisory services in Christchurch, New Zealand. Contact us for optimal project outcomes.">
-    <meta property="og:title" content="Owen-Goodall Quantity Surveyors">
-    <meta property="og:description" content="Expert cost management and construction advisory services in Christchurch, New Zealand.">
-    <meta property="og:image" content="og-image.png">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Favicon -->
+    
+    <!-- Favicon link -->
     <link rel="icon" href="android-chrome-192x192.png" type="image/png">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" defer>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-color: #333;
-            --secondary-color: #444;
-            --background-color: #f0f0f0;
-            --highlight-color: #e5e5e5;
-            --font-primary: 'Poppins', sans-serif;
-            --font-secondary: 'Quicksand', sans-serif;
-        }
-
         body {
             margin: 0;
-            font-family: var(--font-primary);
-            background-color: var(--background-color);
-            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
         }
-
-        header img {
+        img {
             max-width: 250px;
             margin: 40px auto;
             display: block;
         }
-
-        main section {
+        section {
             padding: 40px 20px;
             text-align: center;
         }
-
         section:nth-child(odd) {
             background-color: #dcdcdc;
         }
-
         h2 {
             font-size: 1.4em;
             margin-bottom: 20px;
-            color: var(--secondary-color);
-            font-family: var(--font-secondary);
+            color: #444;
+            font-family: 'Quicksand', sans-serif;
         }
-
-        p {
+        .content {
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
             font-size: 0.95em;
-            color: var(--secondary-color);
+            color: #555;
         }
-
         .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: clamp(20px, 5%, 40px);
-            justify-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
         }
-
         .service-card {
-            background-color: var(--highlight-color);
+            flex: 1 1 calc(33% - 40px);
+            max-width: 300px;
+            background-color: #e5e5e5;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
         }
-
+        .service-card h3 {
+            font-size: 1.1em;
+            margin: 15px 0;
+            color: #444;
+        }
+        .service-card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #555;
+        }
         .service-card i {
             font-size: 2.5em;
-            color: var(--primary-color);
+            color: #333;
             margin-bottom: 10px;
         }
-
         .contact-us {
-            display: inline-block;
+            display: block;
+            width: fit-content;
             margin: 40px auto;
-            background-color: var(--primary-color);
+            text-align: center;
+            background-color: #333;
             color: #fff;
             text-decoration: none;
             font-weight: bold;
@@ -108,97 +98,102 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-
         .contact-us:hover {
-            background-color: var(--secondary-color);
+            background-color: #555;
         }
-
-        footer {
+        .copyright {
             text-align: center;
             margin: 20px 0;
             font-size: 0.9em;
             color: #888;
         }
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .service-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
-
 <body>
-    <header>
-        <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Quantity Surveyors Logo">
-    </header>
+    <!-- Logo -->
+    <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
 
-    <main>
-        <!-- Who We Are Section -->
-        <section id="who-we-are">
-            <h2>Who We Are</h2>
-            <p>
-                At Owen-Goodall Quantity Surveyors (OGQS), our goal is to simplify and improve the building process for our clients. We're driven by a strong, values-based culture that emphasises how we work, not just what we do. Our core values—integrity, responsibility, and accountability—guide everything we do and are deeply embedded in our team.
-            </p>
-            <p>
-                We see ourselves as financial problem solvers within the construction industry. Through our work, we provide clarity on project costs, helping clients make informed decisions and navigate the balance between necessity and desire.
-            </p>
-            <p>
-                Accurately predicting construction costs requires more than just spreadsheets and databases. It demands an understanding of project quality, timelines, and procurement methods. This comprehensive approach is the foundation of all our services at OGQS.
-            </p>
-        </section>
+    <!-- Who We Are Section -->
+    <section id="who-we-are">
+        <h2>Who We Are</h2>
+        <div class="content">
+            At Owen-Goodall Quantity Surveyors (OGQS), our goal is to simplify and improve the building process for our clients. We're driven by a strong, values-based culture that emphasises how we work, not just what we do. Our core values—integrity, responsibility, and accountability—guide everything we do and are deeply embedded in our team.
+        <div class="content">
+             </div>
+            We see ourselves as financial problem solvers within the construction industry. Through our work, we provide clarity on project costs, helping clients make informed decisions and navigate the balance between necessity and desire.
+        <div class="content">
+             </div>
+            Accurately predicting construction costs requires more than just spreadsheets and databases. It demands an understanding of project quality, timelines, and procurement methods. This comprehensive approach is the foundation of all our services at OGQS.
+        </div>
+    </section>
 
-        <!-- Our Services Section -->
-        <section id="our-services">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service-card">
-                    <i class="fa-solid fa-calculator"></i>
-                    <h3>Cost Planning & Management</h3>
-                    <p>Let’s ensure your budget works as hard as you do! From early appraisals to detailed tender estimates, we’ll keep your project on track and your costs in check.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-file-contract"></i>
-                    <h3>Contract Administration</h3>
-                    <p>We handle the paperwork so you don’t have to. From progress claims to final accounts, leave the details to us and focus on your project’s success.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-shield-alt"></i>
-                    <h3>Insurance Services</h3>
-                    <p>Rest easy with our expert insurance support. From reinstatement valuations to claims advice, we’ll ensure your assets are protected.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h3>Bank Finance Reporting</h3>
-                    <p>We’ll keep your project moving with accurate financial reports tailored for banks, making milestone approvals smooth and hassle-free.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <h3>Project Feasibility & Advice</h3>
-                    <p>Thinking of starting a new project? We’ll guide you through cost analyses and feasibility studies to set you up for success.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-home"></i>
-                    <h3>Renovation & Rebuild Estimates</h3>
-                    <p>Whether it’s a refresh or a full rebuild, we’ll provide clear, detailed estimates to bring your vision to life without surprises.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-handshake"></i>
-                    <h3>Procurement Advice</h3>
-                    <p>Navigating contracts and suppliers? Let us help you choose the right partners and procurement strategies for your project.</p>
-                </div>
+    <!-- Our Services Section -->
+    <section id="our-services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <i class="fa-solid fa-calculator"></i>
+                <h3>Cost Planning & Management</h3>
+                <p>Let’s ensure your budget works as hard as you do! From early appraisals to detailed tender estimates, we’ll keep your project on track and your costs in check.</p>
             </div>
-        </section>
+            <div class="service-card">
+                <i class="fa-solid fa-file-contract"></i>
+                <h3>Contract Administration</h3>
+                <p>We handle the paperwork so you don’t have to. From progress claims to final accounts, leave the details to us and focus on your project’s success.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-shield-alt"></i>
+                <h3>Insurance Services</h3>
+                <p>Rest easy with our expert insurance support. From reinstatement valuations to claims advice, we’ll ensure your assets are protected.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Bank Finance Reporting</h3>
+                <p>We’ll keep your project moving with accurate financial reports tailored for banks, making milestone approvals smooth and hassle-free.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Project Feasibility & Advice</h3>
+                <p>Thinking of starting a new project? We’ll guide you through cost analyses and feasibility studies to set you up for success.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-home"></i>
+                <h3>Renovation & Rebuild Estimates</h3>
+                <p>Whether it’s a refresh or a full rebuild, we’ll provide clear, detailed estimates to bring your vision to life without surprises.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Procurement Advice</h3>
+                <p>Navigating contracts and suppliers? Let us help you choose the right partners and procurement strategies for your project.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Our Clients Section -->
-        <section id="our-clients">
-            <h2>Our Clients</h2>
-            <p>
-                We're proud to work with a fantastic mix of clients – from builders and homeowners to subcontractors. Whether you're building your dream home, or planning exciting renovations, we're here to help every step of the way. With our friendly support, you can count on us to meet all your project needs with care, attention, and a touch of professionalism!
-            </p>
-        </section>
+    <!-- Our Clients Section -->
+    <section id="our-clients">
+        <h2>Our Clients</h2>
+        <div class="content">
+            We're proud to work with a fantastic mix of clients – from builders and homeowners to subcontractors. Whether you're building your dream home, or planning exciting renovations, we're here to help every step of the way. With our friendly support, you can count on us to meet all your project needs with care, attention, and a touch of professionalism!
+        </div>
+    </section>
 
-        <!-- Contact Us Button -->
-        <a class="contact-us" href="mailto:kyle@ogqs.co.nz" aria-label="Email Owen-Goodall Quantity Surveyors">Contact OGQS</a>
-    </main>
+    <!-- Contact Us Button -->
+    <a class="contact-us" href="mailto:kyle@ogqs.co.nz">Contact OGQS</a>
 
-    <footer>
+    <!-- Copyright -->
+    <div class="copyright">
         &copy; 2024 Owen-Goodall Quantity Surveyors. All rights reserved.
-    </footer>
+    </div>
 </body>
-
 </html>
