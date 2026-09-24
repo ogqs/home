@@ -1,194 +1,1330 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OGQS</title>
-
-    <!-- Meta description for SEO -->
-    <meta name="description" content="Owen-Goodall Quantity Surveyors offers expert cost management and construction advisory services in Christchurch, New Zealand. Contact us for optimal project outcomes.">
-    
-    <!-- Favicon link -->
+    <title>OGQS | Quantity Surveying & Construction Advisory</title>
+    <meta name="description" content="Owen-Goodall Quantity Surveyors provides practical quantity surveying, cost management and construction advisory services for builders, homeowners, developers and subcontractors across New Zealand.">
+    <meta name="theme-color" content="#202225">
     <link rel="icon" href="android-chrome-192x192.png" type="image/png">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        body {
+        :root {
+            --ink: #202225;
+            --ink-soft: #2b2e32;
+            --slate: #555b61;
+            --muted: #777d82;
+            --line: #d9dadd;
+            --paper: #f4f3f1;
+            --paper-2: #ebeae7;
+            --white: #ffffff;
+            --accent: #a9aaab;
+            --max: 1180px;
+            --shadow: 0 18px 50px rgba(22, 24, 26, .10);
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 82px;
+        }
+
+        body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            color: var(--ink);
+            background: var(--paper);
+            line-height: 1.7;
+            font-weight: 300;
         }
-        img {
-            max-width: 250px;
-            margin: 40px auto;
-            display: block;
+
+        body.menu-open {
+            overflow: hidden;
         }
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        section:nth-child(odd) {
-            background-color: #dcdcdc;
-        }
-        h2 {
-            font-size: 1.4em;
-            margin-bottom: 20px;
-            color: #444;
-            font-family: 'Quicksand', sans-serif;
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            font-size: 0.95em;
-            color: #555;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-        .service-card {
-            flex: 1 1 calc(33% - 40px);
-            max-width: 300px;
-            background-color: #e5e5e5;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-        }
-        .service-card h3 {
-            font-size: 1.1em;
-            margin: 15px 0;
-            color: #444;
-        }
-        .service-card p {
-            font-size: 0.95em;
-            line-height: 1.6;
-            color: #555;
-        }
-        .service-card i {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .contact-us {
-            display: block;
-            width: fit-content;
-            margin: 40px auto;
-            text-align: center;
-            background-color: #333;
-            color: #fff;
+
+        a {
+            color: inherit;
             text-decoration: none;
-            font-weight: bold;
-            padding: 12px 30px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .contact-us:hover {
-            background-color: #555;
+
+        img {
+            max-width: 100%;
+            display: block;
         }
-        .copyright {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 0.9em;
-            color: #888;
+
+        button {
+            font: inherit;
         }
-        @media (max-width: 768px) {
-            .services {
-                flex-direction: column;
-                gap: 20px;
+
+        .container {
+            width: min(calc(100% - 48px), var(--max));
+            margin-inline: auto;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--slate);
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 28px;
+            height: 1px;
+            background: currentColor;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.15;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: clamp(2.7rem, 6vw, 5.25rem);
+            letter-spacing: -.045em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.35rem);
+            letter-spacing: -.035em;
+        }
+
+        h3 {
+            font-size: 1.22rem;
+        }
+
+        .section {
+            padding: 110px 0;
+        }
+
+        /* ---------------- HEADER ---------------- */
+
+        .site-header {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 1000;
+            background: rgba(32, 34, 37, .94);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            min-width: 0;
+        }
+
+        .brand img {
+            width: 170px;
+            max-height: 48px;
+            object-fit: contain;
+            object-position: left center;
+            filter: invert(1);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e9e9e9;
+            font-size: .82rem;
+            font-weight: 400;
+            letter-spacing: .03em;
+            transition: color .2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-cta {
+            padding: 10px 18px;
+            border: 1px solid rgba(255,255,255,.35);
+            transition: background .2s ease, border-color .2s ease;
+        }
+
+        .nav-cta:hover {
+            background: #fff;
+            border-color: #fff;
+            color: var(--ink) !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255,255,255,.25);
+            background: transparent;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ---------------- HERO ---------------- */
+
+        .hero {
+            min-height: 780px;
+            padding: 170px 0 100px;
+            color: white;
+            background:
+                linear-gradient(90deg, rgba(24,25,27,.97) 0%, rgba(24,25,27,.90) 48%, rgba(24,25,27,.58) 100%),
+                radial-gradient(circle at 78% 30%, rgba(255,255,255,.10), transparent 32%),
+                linear-gradient(135deg, #292c30, #161719);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 620px;
+            height: 620px;
+            border: 1px solid rgba(255,255,255,.09);
+            border-radius: 50%;
+            right: -220px;
+            top: 120px;
+        }
+
+        .hero-grid {
+            min-height: 510px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+            align-items: center;
+            gap: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .eyebrow {
+            color: #bfc1c3;
+        }
+
+        .hero h1 {
+            max-width: 780px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: #bfc0c1;
+        }
+
+        .hero-copy {
+            max-width: 650px;
+            color: #d3d4d5;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            margin-bottom: 36px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 12px 22px;
+            border: 1px solid transparent;
+            font-size: .82rem;
+            font-weight: 500;
+            letter-spacing: .03em;
+            transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-light {
+            background: white;
+            color: var(--ink);
+        }
+
+        .btn-light:hover {
+            background: #e9e9e9;
+        }
+
+        .btn-outline {
+            color: white;
+            border-color: rgba(255,255,255,.35);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.08);
+            border-color: rgba(255,255,255,.7);
+        }
+
+        .hero-panel {
+            justify-self: end;
+            width: min(100%, 390px);
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,.14);
+            background: rgba(255,255,255,.055);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-panel-label {
+            color: #aeb1b3;
+            font-size: .72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .16em;
+            margin-bottom: 24px;
+        }
+
+        .hero-panel-item {
+            display: flex;
+            gap: 15px;
+            padding: 18px 0;
+            border-top: 1px solid rgba(255,255,255,.10);
+        }
+
+        .hero-panel-item:first-of-type {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        .hero-panel-item i {
+            color: #bfc1c3;
+            width: 20px;
+            padding-top: 3px;
+        }
+
+        .hero-panel-item strong {
+            display: block;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-panel-item span {
+            display: block;
+            color: #aaaeb1;
+            font-size: .78rem;
+            line-height: 1.6;
+            margin-top: 3px;
+        }
+
+        /* ---------------- INTRO ---------------- */
+
+        .intro {
+            background: var(--white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .intro h2 {
+            max-width: 430px;
+        }
+
+        .intro-text {
+            max-width: 720px;
+            color: var(--slate);
+            font-size: 1rem;
+        }
+
+        .intro-text p + p {
+            margin-top: 20px;
+        }
+
+        .signature-line {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 34px;
+            color: var(--ink);
+            font-size: .78rem;
+            font-weight: 500;
+        }
+
+        .signature-line::before {
+            content: "";
+            width: 36px;
+            height: 1px;
+            background: var(--ink);
+        }
+
+        /* ---------------- SERVICES ---------------- */
+
+        .services {
+            background: var(--paper);
+        }
+
+        .section-heading {
+            max-width: 730px;
+            margin-bottom: 55px;
+        }
+
+        .section-heading p {
+            margin-top: 20px;
+            color: var(--slate);
+            max-width: 650px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .service-card {
+            min-height: 290px;
+            padding: 34px;
+            background: var(--white);
+            position: relative;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            z-index: 2;
+        }
+
+        .service-number {
+            color: #aaa;
+            font-family: 'Quicksand', sans-serif;
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            margin-bottom: 34px;
+        }
+
+        .service-card i {
+            color: var(--slate);
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 13px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: .88rem;
+            line-height: 1.75;
+        }
+
+        /* ---------------- CLIENTS ---------------- */
+
+        .clients {
+            color: white;
+            background: var(--ink);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .clients h2 {
+            color: white;
+        }
+
+        .clients-copy {
+            color: #c1c3c5;
+            margin-top: 24px;
+            max-width: 620px;
+        }
+
+        .client-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-top: 1px solid rgba(255,255,255,.15);
+        }
+
+        .client-list div {
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(255,255,255,.15);
+            color: #e1e2e3;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: .98rem;
+        }
+
+        .client-list div:nth-child(odd) {
+            margin-right: 28px;
+        }
+
+        .client-list i {
+            color: #929598;
+            margin-right: 10px;
+            font-size: .8rem;
+        }
+
+        /* ---------------- VALUES ---------------- */
+
+        .values {
+            background: var(--paper-2);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 100px;
+            align-items: start;
+        }
+
+        .values-intro p {
+            margin-top: 22px;
+            color: var(--slate);
+        }
+
+        .value-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .value {
+            padding: 28px 24px;
+            background: rgba(255,255,255,.55);
+            border-top: 2px solid var(--ink);
+        }
+
+        .value h3 {
+            margin-bottom: 12px;
+        }
+
+        .value p {
+            color: var(--muted);
+            font-size: .84rem;
+            line-height: 1.7;
+        }
+
+        /* ---------------- PROCESS ---------------- */
+
+        .process {
+            background: white;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .process-step {
+            padding: 32px 30px 10px 0;
+            margin-right: 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .process-step:not(:last-child) {
+            border-right: 1px solid var(--line);
+        }
+
+        .process-step + .process-step {
+            padding-left: 30px;
+        }
+
+        .process-number {
+            color: #999;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: .75rem;
+            letter-spacing: .14em;
+            margin-bottom: 25px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            color: var(--muted);
+            font-size: .84rem;
+            line-height: 1.7;
+        }
+
+        /* ---------------- CTA ---------------- */
+
+        .contact {
+            background: var(--paper);
+            padding: 100px 0;
+        }
+
+        .contact-box {
+            position: relative;
+            overflow: hidden;
+            background: var(--ink);
+            color: white;
+            padding: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .contact-box::after {
+            content: "";
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+            right: -120px;
+            top: -150px;
+        }
+
+        .contact-box h2 {
+            max-width: 650px;
+        }
+
+        .contact-box p {
+            color: #babdc0;
+            margin-top: 16px;
+            max-width: 600px;
+            font-size: .92rem;
+        }
+
+        .contact-box .btn {
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            background: #17191b;
+            color: #aeb1b4;
+            padding: 48px 0 28px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 50px;
+            padding-bottom: 38px;
+            border-bottom: 1px solid rgba(255,255,255,.09);
+        }
+
+        .footer-brand img {
+            width: 190px;
+            filter: invert(1);
+            opacity: .95;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            max-width: 390px;
+            font-size: .8rem;
+            line-height: 1.7;
+            color: #888d91;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 9px;
+            font-size: .82rem;
+        }
+
+        .footer-contact a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: .72rem;
+            color: #777b7f;
+        }
+
+        /* ---------------- REVEAL ---------------- */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media (max-width: 950px) {
+            .hero-grid,
+            .intro-grid,
+            .clients-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 55px;
             }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-panel {
+                justify-self: start;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-step:nth-child(2) {
+                border-right: 0;
+            }
+
+            .process-step:nth-child(3) {
+                padding-left: 0;
+            }
+
+            .value-items {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-box {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 55px;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                width: min(calc(100% - 34px), var(--max));
+            }
+
+            .section {
+                padding: 78px 0;
+            }
+
+            .nav {
+                min-height: 68px;
+            }
+
+            .brand img {
+                width: 145px;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links {
+                position: fixed;
+                inset: 68px 0 0;
+                background: rgba(32,34,37,.98);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 0;
+                padding: 25px 24px;
+                transform: translateX(100%);
+                transition: transform .3s ease;
+            }
+
+            .nav-links.open {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid rgba(255,255,255,.10);
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 17px 0;
+                font-size: .95rem;
+            }
+
+            .nav-cta {
+                display: inline-block !important;
+                width: fit-content;
+                margin-top: 12px;
+            }
+
+            .hero {
+                padding: 135px 0 75px;
+            }
+
+            .hero-grid {
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.5rem, 13vw, 4rem);
+            }
+
+            .hero-copy {
+                font-size: .94rem;
+            }
+
+            .service-grid,
+            .process-grid,
+            .value-items {
+                grid-template-columns: 1fr;
+            }
+
             .service-card {
-                flex: 1 1 100%;
-                max-width: 100%;
-                margin: 0 auto;
+                min-height: auto;
+            }
+
+            .process-step,
+            .process-step + .process-step {
+                padding: 28px 0;
+                margin: 0;
+                border-right: 0 !important;
+            }
+
+            .clients-grid {
+                gap: 45px;
+            }
+
+            .client-list {
+                grid-template-columns: 1fr;
+            }
+
+            .client-list div:nth-child(odd) {
+                margin-right: 0;
+            }
+
+            .contact {
+                padding: 55px 0;
+            }
+
+            .contact-box {
+                padding: 40px 28px;
+            }
+
+            .footer-top,
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .footer-contact {
+                align-items: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Logo -->
-    <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Logo">
 
-    <!-- Who We Are Section -->
-    <section id="who-we-are">
-        <h2>Who We Are</h2>
-        <div class="content">
-            At Owen-Goodall Quantity Surveyors (OGQS), our goal is to simplify and improve the building process for our clients. We're driven by a strong, values-based culture that emphasises how we work, not just what we do. Our core values-<strong>integrity</strong>, <strong>responsibility</strong>, and <strong>accountability</strong>-guide everything we do and are deeply embedded in our team.
-        
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="#top" aria-label="OGQS home">
+                <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Quantity Surveyors">
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#clients">Who We Work With</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a class="nav-cta" href="#contact">Get in touch</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- Our Services Section -->
-    <section id="our-services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service-card">
-                <i class="fa-solid fa-calculator"></i>
-                <h3>Cost Planning & Management</h3>
-                <p>Let’s ensure your budget works as hard as you do! From early appraisals to detailed tender estimates, we’ll keep your project on track and your costs in check.</p>
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="reveal">
+                    <div class="eyebrow">Quantity Surveying & Construction Advisory</div>
+
+                    <h1>
+                        Clear costs.<br>
+                        Better decisions.<br>
+                        <span>Better projects.</span>
+                    </h1>
+
+                    <p class="hero-copy">
+                        Practical quantity surveying and construction advice that gives
+                        builders, homeowners, developers and subcontractors greater
+                        control over cost, contracts and project outcomes.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-light" href="#contact">
+                            Talk to OGQS
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a class="btn btn-outline" href="#services">
+                            Explore services
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-panel reveal">
+                    <div class="hero-panel-label">What we help with</div>
+
+                    <div class="hero-panel-item">
+                        <i class="fa-solid fa-calculator"></i>
+                        <div>
+                            <strong>Cost certainty</strong>
+                            <span>Planning, estimating and managing project costs.</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-panel-item">
+                        <i class="fa-solid fa-file-contract"></i>
+                        <div>
+                            <strong>Contract control</strong>
+                            <span>Claims, variations, contracts and final accounts.</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-panel-item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div>
+                            <strong>Commercial advice</strong>
+                            <span>Practical advice from early feasibility through delivery.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-file-contract"></i>
-                <h3>Contract Administration</h3>
-                <p>We handle the paperwork so you don’t have to. From progress claims to final accounts, leave the details to us and focus on your project’s success.</p>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section intro" id="about">
+            <div class="container intro-grid">
+                <div class="reveal">
+                    <div class="eyebrow">About OGQS</div>
+                    <h2>Quantity surveying without the unnecessary complexity.</h2>
+                </div>
+
+                <div class="intro-text reveal">
+                    <p>
+                        Owen-Goodall Quantity Surveyors (OGQS) provides independent
+                        quantity surveying and construction advisory services focused
+                        on making projects easier to understand, manage and deliver.
+                    </p>
+
+                    <p>
+                        We work alongside our clients rather than simply producing
+                        numbers. That means understanding the project, identifying
+                        commercial risks early and providing straightforward advice
+                        when decisions need to be made.
+                    </p>
+
+                    <p>
+                        From a renovation or residential build through to larger
+                        construction projects, our aim is simple: give you clear
+                        information so you can make informed decisions and keep your
+                        project moving.
+                    </p>
+
+                    <div class="signature-line">Practical advice. Clear numbers. Accountable delivery.</div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-shield-alt"></i>
-                <h3>Insurance Services</h3>
-                <p>Rest easy with our expert insurance support. From reinstatement valuations to claims advice, we’ll ensure your assets are protected.</p>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div class="eyebrow">Our services</div>
+                    <h2>Commercial support from the first numbers to the final account.</h2>
+                    <p>
+                        Flexible QS support tailored to the stage and requirements of
+                        your project.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+
+                    <article class="service-card reveal">
+                        <div class="service-number">01</div>
+                        <i class="fa-solid fa-calculator"></i>
+                        <h3>Cost Planning & Management</h3>
+                        <p>
+                            Early project appraisals, cost plans, estimates and ongoing
+                            cost management to help keep your project within budget.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">02</div>
+                        <i class="fa-solid fa-file-contract"></i>
+                        <h3>Contract Administration</h3>
+                        <p>
+                            Progress claims, variations, contract administration,
+                            payment assessments and final accounts.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">03</div>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Insurance Services</h3>
+                        <p>
+                            Reinstatement estimates, insurance valuations and
+                            construction cost advice for repair and rebuild projects.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">04</div>
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h3>Bank Finance Reporting</h3>
+                        <p>
+                            Clear project reporting and cost information to support
+                            lender requirements, drawdowns and project monitoring.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">05</div>
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <h3>Project Feasibility & Advice</h3>
+                        <p>
+                            Preliminary cost advice, feasibility assessments and
+                            commercial input before you commit to a project.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">06</div>
+                        <i class="fa-solid fa-house"></i>
+                        <h3>Renovation & Rebuild Estimates</h3>
+                        <p>
+                            Detailed construction estimates for renovations, additions,
+                            alterations, repairs and full residential rebuilds.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">07</div>
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3>Procurement Advice</h3>
+                        <p>
+                            Tendering, trade pricing, procurement strategy and
+                            commercial advice to help you select the right approach.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">08</div>
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <h3>Construction Advisory</h3>
+                        <p>
+                            Practical commercial support for builders and project teams
+                            when additional QS capability or independent advice is needed.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">09</div>
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <h3>Independent Cost Review</h3>
+                        <p>
+                            An independent review of budgets, estimates, tenders or
+                            project costs when you need a second set of eyes.
+                        </p>
+                    </article>
+
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3>Bank Finance Reporting</h3>
-                <p>We’ll keep your project moving with accurate financial reports tailored for banks, making milestone approvals smooth and hassle-free.</p>
+        </section>
+
+        <!-- CLIENTS -->
+        <section class="section clients" id="clients">
+            <div class="container clients-grid">
+                <div class="reveal">
+                    <div class="eyebrow">Who we work with</div>
+                    <h2>Built around the people behind the project.</h2>
+                    <p class="clients-copy">
+                        OGQS works with a broad range of construction clients. Whether
+                        you need ongoing QS support or advice on a single project,
+                        we can tailor our involvement to suit.
+                    </p>
+                </div>
+
+                <div class="client-list reveal">
+                    <div><i class="fa-solid fa-check"></i> Builders & Contractors</div>
+                    <div><i class="fa-solid fa-check"></i> Homeowners</div>
+                    <div><i class="fa-solid fa-check"></i> Developers</div>
+                    <div><i class="fa-solid fa-check"></i> Subcontractors</div>
+                    <div><i class="fa-solid fa-check"></i> Property Investors</div>
+                    <div><i class="fa-solid fa-check"></i> Project Teams</div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-lightbulb"></i>
-                <h3>Project Feasibility & Advice</h3>
-                <p>Thinking of starting a new project? We’ll guide you through cost analyses and feasibility studies to set you up for success.</p>
+        </section>
+
+        <!-- VALUES -->
+        <section class="section values" id="approach">
+            <div class="container values-grid">
+                <div class="values-intro reveal">
+                    <div class="eyebrow">Our approach</div>
+                    <h2>How we work matters.</h2>
+                    <p>
+                        Construction is complicated enough. Our approach is based on
+                        being straightforward, accountable and commercially practical.
+                    </p>
+                </div>
+
+                <div class="value-items">
+                    <article class="value reveal">
+                        <h3>Integrity</h3>
+                        <p>
+                            Honest advice and transparent information, even when the
+                            answer isn't necessarily the easiest one.
+                        </p>
+                    </article>
+
+                    <article class="value reveal">
+                        <h3>Responsibility</h3>
+                        <p>
+                            We take ownership of our work and understand the importance
+                            of getting the detail right.
+                        </p>
+                    </article>
+
+                    <article class="value reveal">
+                        <h3>Accountability</h3>
+                        <p>
+                            Clear communication, reliable follow-through and taking
+                            responsibility for the outcomes we contribute to.
+                        </p>
+                    </article>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-home"></i>
-                <h3>Renovation & Rebuild Estimates</h3>
-                <p>Whether it’s a refresh or a full rebuild, we’ll provide clear, detailed estimates to bring your vision to life without surprises.</p>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section process">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div class="eyebrow">Working with OGQS</div>
+                    <h2>A straightforward process.</h2>
+                    <p>
+                        The level of involvement can change as your project develops.
+                        We can provide a one-off service or ongoing support.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+                    <article class="process-step reveal">
+                        <div class="process-number">01 / UNDERSTAND</div>
+                        <h3>Understand the project</h3>
+                        <p>
+                            We get across the scope, priorities, budget and commercial
+                            requirements before recommending the right level of support.
+                        </p>
+                    </article>
+
+                    <article class="process-step reveal">
+                        <div class="process-number">02 / PLAN</div>
+                        <h3>Build the numbers</h3>
+                        <p>
+                            We establish realistic costs, identify allowances and
+                            highlight risks that could affect the project.
+                        </p>
+                    </article>
+
+                    <article class="process-step reveal">
+                        <div class="process-number">03 / MANAGE</div>
+                        <h3>Stay in control</h3>
+                        <p>
+                            We monitor costs, variations, claims and commercial
+                            decisions as the project progresses.
+                        </p>
+                    </article>
+
+                    <article class="process-step reveal">
+                        <div class="process-number">04 / DELIVER</div>
+                        <h3>Close it out</h3>
+                        <p>
+                            We help bring the commercial side of the project together
+                            with clear reporting and final account support.
+                        </p>
+                    </article>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-handshake"></i>
-                <h3>Procurement Advice</h3>
-                <p>Navigating contracts and suppliers? Let us help you choose the right partners and procurement strategies for your project.</p>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-box reveal">
+                    <div>
+                        <div class="eyebrow">Start a conversation</div>
+                        <h2>Have a project in mind?</h2>
+                        <p>
+                            Whether you need a detailed estimate, ongoing QS support
+                            or simply want to talk through a project, get in touch.
+                        </p>
+                    </div>
+
+                    <a class="btn btn-light" href="mailto:kyle@ogqs.co.nz">
+                        Contact OGQS
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="OGQS%20OWEN-GOODALL%20QUANTITY%20SURVEYORS%20LOGO%20FINAL%20-%20Black.png" alt="Owen-Goodall Quantity Surveyors">
+                    <p>
+                        Quantity surveying and construction advisory services focused
+                        on clear costs, practical advice and better project outcomes.
+                    </p>
+                </div>
+
+                <div class="footer-contact">
+                    <a href="mailto:kyle@ogqs.co.nz">kyle@ogqs.co.nz</a>
+                    <a href="#contact">Get in touch</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> Owen-Goodall Quantity Surveyors. All rights reserved.</span>
+                <span>Quantity Surveying & Construction Advisory</span>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Our Clients Section -->
-    <section id="our-clients">
-        <h2>Our Clients</h2>
-        <div class="content">
-            We're proud to work with a fantastic mix of clients – from builders and homeowners to subcontractors. Whether you're building your dream home, or planning exciting renovations, we're here to help every step of the way. With our friendly support, you can count on us to meet all your project needs with care, attention, and a touch of professionalism!
-        </div>
-    </section>
+    <script>
+        // Mobile navigation
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
 
-    <!-- Contact Us Button -->
-    <a class="contact-us" href="mailto:kyle@ogqs.co.nz">Contact OGQS</a>
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+            document.body.classList.toggle('menu-open', isOpen);
+        });
 
-    <!-- Copyright -->
-    <div class="copyright">
-        &copy; 2026 Owen-Goodall Quantity Surveyors. All rights reserved.
-    </div>
+        navItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open menu');
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Reveal elements as they enter the viewport
+        const revealElements = document.querySelectorAll('.reveal');
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(element => observer.observe(element));
+        } else {
+            revealElements.forEach(element => element.classList.add('visible'));
+        }
+
+        // Current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
