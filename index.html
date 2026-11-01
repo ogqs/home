@@ -394,38 +394,11 @@
         .about-text p + p { margin-top: 18px; }
 
         .founder {
-            display: flex;
-            align-items: center;
-            gap: 18px;
             margin-top: 40px;
         }
 
-        .founder-photo {
-            position: relative;
-            width: 80px;
-            height: 80px;
-            flex-shrink: 0;
-            border-radius: 50%;
-            overflow: hidden;
-            background: var(--bush);
-            color: var(--paper);
-            display: grid;
-            place-items: center;
-            font-size: 1.6rem;
-            font-weight: 650;
-            font-stretch: 116%;
-        }
-
-        .founder-photo img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .founder strong { display: block; font-size: 1.15rem; font-weight: 650; }
-        .founder span:not([aria-hidden]) { display: block; color: var(--ink-2); font-size: .92rem; }
+        .founder strong { display: block; font-size: 1.25rem; font-weight: 650; font-stretch: 108%; }
+        .founder span { display: block; color: var(--ink-2); font-size: .95rem; }
 
         .founder-quote {
             margin-top: 22px;
@@ -1072,16 +1045,9 @@
                 <div>
                     <h2>Quantity surveying without the unnecessary complexity.</h2>
 
-                    <!-- Add a square photo named kyle.jpg next to this file and it will appear here automatically -->
                     <div class="founder">
-                        <div class="founder-photo">
-                            <span aria-hidden="true">K</span>
-                            <img src="kyle.jpg" alt="Kyle, founder of OGQS" onerror="this.remove()">
-                        </div>
-                        <div>
-                            <strong>Kyle</strong>
-                            <span>Founder and quantity surveyor</span>
-                        </div>
+                        <strong>Kyle</strong>
+                        <span>Founder and quantity surveyor</span>
                     </div>
 
                     <p class="founder-quote">
@@ -1375,13 +1341,8 @@
                     </ul>
                 </div>
 
-                <!--
-                    CONTACT FORM SETUP: create a free form at https://formspree.io
-                    and replace YOUR_FORM_ID below with the ID it gives you.
-                    Until then, submitting opens the visitor's email app with
-                    their details filled in, so nothing is lost.
-                -->
-                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <!-- Contact form submissions are handled by Formspree (form ID xyeenava) -->
+                <form class="contact-form" action="https://formspree.io/f/xyeenava" method="POST">
                     <div class="field">
                         <label for="cf-name">Name</label>
                         <input id="cf-name" name="name" type="text" autocomplete="name" required>
