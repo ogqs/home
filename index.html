@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OGQS | Quantity Surveying & Construction Advisory</title>
-    <meta name="description" content="Owen-Goodall Quantity Surveyors provides practical quantity surveying, cost management and construction advisory services for builders, homeowners, developers and subcontractors across New Zealand.">
+    <title>OGQS | Quantity Surveyors in Christchurch & the South Island</title>
+    <meta name="description" content="Owen-Goodall Quantity Surveyors provides practical quantity surveying, cost management and construction advisory services for builders, homeowners, developers and subcontractors. Based in Christchurch, working across the South Island.">
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_NZ">
     <meta property="og:site_name" content="Owen-Goodall Quantity Surveyors">
-    <meta property="og:title" content="OGQS | Quantity Surveying & Construction Advisory">
-    <meta property="og:description" content="Practical quantity surveying and construction advice for builders, homeowners, developers and subcontractors across New Zealand.">
+    <meta property="og:title" content="OGQS | Quantity Surveyors in Christchurch & the South Island">
+    <meta property="og:description" content="Practical quantity surveying and construction advice for builders, homeowners, developers and subcontractors. Based in Christchurch, working across the South Island.">
 
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
@@ -28,7 +28,14 @@
         "description": "Quantity surveying, cost management and construction advisory services.",
         "email": "kyle@ogqs.co.nz",
         "telephone": "+64 27 891 2147",
-        "areaServed": "New Zealand",
+        "url": "https://www.ogqs.co.nz",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Christchurch",
+            "addressRegion": "Canterbury",
+            "addressCountry": "NZ"
+        },
+        "areaServed": { "@type": "Place", "name": "South Island, New Zealand" },
         "founder": {
             "@type": "Person",
             "name": "Kyle",
@@ -291,6 +298,24 @@
             margin-top: 36px;
         }
 
+        .hero-where {
+            margin-top: 14px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .hero-where::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: var(--fern);
+            vertical-align: middle;
+            transform: translateY(-1px);
+        }
+
         .hero-creds {
             list-style: none;
             display: flex;
@@ -465,7 +490,7 @@
 
         /* ---------------- PROJECTS ---------------- */
 
-        .projects { background: var(--paper); }
+        .services { background: var(--paper); }
 
         .project-grid {
             display: grid;
@@ -719,6 +744,12 @@
 
         .contact-direct li + li { margin-top: 18px; }
 
+        .contact-where {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
         .contact-form {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -814,6 +845,7 @@
         }
 
         .footer-brand p { max-width: 26em; }
+        .footer-brand .footer-where { margin-top: 10px; color: var(--paper); }
 
         .footer-links {
             list-style: none;
@@ -955,6 +987,32 @@
             .footer-links { text-align: left; }
         }
 
+        .mobile-cta { display: none; }
+
+        @media (max-width: 760px) {
+            .mobile-cta {
+                position: fixed;
+                left: 0; right: 0; bottom: 0;
+                z-index: 900;
+                display: grid;
+                grid-template-columns: 1fr 1.6fr;
+                gap: 8px;
+                padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+                background: rgba(255, 255, 255, .96);
+                border-top: 1px solid var(--rule);
+                transition: transform .25s ease;
+            }
+            .mobile-cta a {
+                display: flex; align-items: center; justify-content: center;
+                min-height: 46px; border-radius: var(--radius);
+                font-weight: 600; font-size: .98rem;
+            }
+            .mobile-cta a:first-child { border: 1px solid var(--rule); color: var(--ink); }
+            .mobile-cta a:last-child { background: var(--bush); color: var(--paper); }
+            .mobile-cta.hidden { transform: translateY(110%); }
+            footer { padding-bottom: 96px; }
+        }
+
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
             *, *::before, *::after {
@@ -981,9 +1039,9 @@
 
             <nav aria-label="Main">
                 <ul class="nav-links" id="primary-nav">
-                    <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#approach">Approach</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a class="btn btn-primary" href="#contact">Get in touch</a></li>
@@ -1006,6 +1064,7 @@
                         builders, homeowners, developers and subcontractors greater
                         control over cost, contracts and project outcomes.
                     </p>
+                    <p class="hero-where">Based in Christchurch, working across the South Island.</p>
 
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#contact">Talk to OGQS</a>
@@ -1035,51 +1094,6 @@
                             <span>Practical advice from early feasibility through delivery.</span>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="section about" id="about">
-            <div class="container about-grid">
-                <div>
-                    <h2>Quantity surveying without the unnecessary complexity.</h2>
-
-                    <div class="founder">
-                        <strong>Kyle</strong>
-                        <span>Quantity surveyor</span>
-                    </div>
-
-                    <p class="founder-quote">
-                        &ldquo;When you work with OGQS, you deal with me directly, from
-                        the first conversation through to the final account.&rdquo;
-                    </p>
-
-                    <ul class="creds">
-                        <li>Bachelor of Construction</li>
-                        <li>NZIQS member</li>
-                        <li>10+ years in construction</li>
-                    </ul>
-                </div>
-
-                <div class="about-text">
-                    <p>
-                        Owen-Goodall Quantity Surveyors (OGQS) provides independent
-                        quantity surveying and construction advisory services focused
-                        on making projects easier to understand, manage and deliver.
-                    </p>
-                    <p>
-                        We work alongside our clients rather than simply producing
-                        numbers. That means understanding the project, identifying
-                        commercial risks early and providing straightforward advice
-                        when decisions need to be made.
-                    </p>
-                    <p>
-                        From a renovation or residential build through to larger
-                        construction projects, our aim is simple: give you clear
-                        information so you can make informed decisions and keep your
-                        project moving.
-                    </p>
                 </div>
             </div>
         </section>
@@ -1239,6 +1253,51 @@
             </div>
         </section>
 
+        <!-- ABOUT -->
+        <section class="section about" id="about">
+            <div class="container about-grid">
+                <div>
+                    <h2>Quantity surveying without the unnecessary complexity.</h2>
+
+                    <div class="founder">
+                        <strong>Kyle</strong>
+                        <span>Quantity surveyor</span>
+                    </div>
+
+                    <p class="founder-quote">
+                        &ldquo;When you work with OGQS, you deal with me directly, from
+                        the first conversation through to the final account.&rdquo;
+                    </p>
+
+                    <ul class="creds">
+                        <li>Bachelor of Construction</li>
+                        <li>NZIQS member</li>
+                        <li>10+ years in construction</li>
+                    </ul>
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        Owen-Goodall Quantity Surveyors (OGQS) provides independent
+                        quantity surveying and construction advisory services focused
+                        on making projects easier to understand, manage and deliver.
+                    </p>
+                    <p>
+                        We work alongside our clients rather than simply producing
+                        numbers. That means understanding the project, identifying
+                        commercial risks early and providing straightforward advice
+                        when decisions need to be made.
+                    </p>
+                    <p>
+                        From a renovation or residential build through to larger
+                        construction projects, our aim is simple: give you clear
+                        information so you can make informed decisions and keep your
+                        project moving.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- APPROACH -->
         <section class="section approach" id="approach">
             <div class="container">
@@ -1314,6 +1373,10 @@
                         <p>Yes. We help builders and subcontractors with estimating, progress claims, variations and final accounts, and can step in as extra QS capacity when a team is stretched.</p>
                     </details>
                     <details class="faq-item">
+                        <summary>Do you work outside Christchurch?</summary>
+                        <p>Yes. We're based in Christchurch and work with clients across the South Island. Much of our work is done from drawings and project documents, and we visit site whenever the project needs it.</p>
+                    </details>
+                    <details class="faq-item">
                         <summary>What do you need from me to get started?</summary>
                         <p>Plans or drawings if you have them, a rough idea of scope, budget and timing, and anything you've already been quoted. If it's still early days, a conversation is a perfectly good place to start.</p>
                     </details>
@@ -1338,6 +1401,7 @@
                     <ul class="contact-direct">
                         <li><span>Email</span><a href="mailto:kyle@ogqs.co.nz?subject=Project%20enquiry">kyle@ogqs.co.nz</a></li>
                         <li><span>Phone</span><a href="tel:+64278912147">027 891 2147</a></li>
+                        <li><span>Location</span><strong class="contact-where">Christchurch, working across the South Island</strong></li>
                     </ul>
                 </div>
 
@@ -1383,12 +1447,18 @@
 
     </main>
 
+    <div class="mobile-cta" aria-label="Quick contact">
+        <a href="tel:+64278912147">Call</a>
+        <a href="#contact">Send an enquiry</a>
+    </div>
+
     <footer>
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
                     <img src="OGQS_Logo_Reversed.svg" alt="Owen-Goodall Quantity Surveyors" width="264" height="80" loading="lazy">
                     <p>Quantity surveying and construction advisory services focused on clear costs, practical advice and better project outcomes.</p>
+                    <p class="footer-where">Based in Christchurch, working across the South Island.</p>
                 </div>
 
                 <ul class="footer-links">
@@ -1455,6 +1525,13 @@
             }, { rootMargin: '-45% 0px -50% 0px' });
 
             document.querySelectorAll('main section[id]').forEach(s => sectionObserver.observe(s));
+        }
+
+        // Hide the mobile contact bar while the contact section is on screen
+        const mobileCta = document.querySelector('.mobile-cta');
+        const contactSection = document.getElementById('contact');
+        if (mobileCta && contactSection && 'IntersectionObserver' in window) {
+            new IntersectionObserver(([e]) => mobileCta.classList.toggle('hidden', e.isIntersecting), { threshold: 0.15 }).observe(contactSection);
         }
 
         // Contact form
