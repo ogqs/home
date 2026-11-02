@@ -380,16 +380,15 @@
             display: grid;
             grid-template-columns: 10px 1fr;
             column-gap: 16px;
-            padding: 22px 0;
+            align-items: center;
+            padding: 16px 0;
             border-bottom: 1px solid rgba(207, 227, 203, .18);
         }
 
         .help-panel li::before {
             content: "";
-            grid-row: span 2;
             width: 10px;
             height: 10px;
-            margin-top: .5em;
             background: var(--fern-light);
             border-radius: 2px;
         }
@@ -406,7 +405,7 @@
 
         /* ---------------- ABOUT ---------------- */
 
-        .about { background: var(--paper); }
+        .approach { background: var(--paper); }
 
         .about-grid {
             display: grid;
@@ -478,9 +477,11 @@
         }
 
         .stage li {
-            padding: 20px 0;
+            padding: 14px 0;
             border-top: 1px solid var(--rule);
         }
+
+        .stage li h4 { font-weight: 500; }
 
         .stage li p {
             margin-top: 6px;
@@ -657,7 +658,6 @@
 
         /* ---------------- FAQ ---------------- */
 
-        .faq { background: var(--paper); }
 
         .faq-grid {
             display: grid;
@@ -1040,9 +1040,8 @@
             <nav aria-label="Main">
                 <ul class="nav-links" id="primary-nav">
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#approach">Approach</a></li>
+                    <li><a href="#approach">How we work</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a class="btn btn-primary" href="#contact">Get in touch</a></li>
                 </ul>
@@ -1060,15 +1059,14 @@
                     <h1><span>Clear costs.</span> <span>Better decisions.</span> <span>Better projects.</span></h1>
 
                     <p class="lede">
-                        Practical quantity surveying and construction advice that gives
-                        builders, homeowners, developers and subcontractors greater
-                        control over cost, contracts and project outcomes.
+                        Practical quantity surveying and cost advice for builders,
+                        homeowners and developers.
                     </p>
                     <p class="hero-where">Based in Christchurch, working across the South Island.</p>
 
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#contact">Talk to OGQS</a>
-                        <a class="btn btn-quiet" href="#services">See our services</a>
+                        <a class="btn btn-quiet" href="#services">Our services</a>
                     </div>
 
                     <ul class="hero-creds">
@@ -1079,20 +1077,13 @@
                 </div>
 
                 <div class="help-panel">
-                    <h3>What we help with</h3>
+                    <h3>Who we work with</h3>
                     <ul>
-                        <li>
-                            <strong>Cost certainty</strong>
-                            <span>Planning, estimating and managing project costs.</span>
-                        </li>
-                        <li>
-                            <strong>Contract control</strong>
-                            <span>Claims, variations, contracts and final accounts.</span>
-                        </li>
-                        <li>
-                            <strong>Commercial advice</strong>
-                            <span>Practical advice from early feasibility through delivery.</span>
-                        </li>
+                        <li><strong>Builders and contractors</strong></li>
+                        <li><strong>Homeowners</strong></li>
+                        <li><strong>Developers and investors</strong></li>
+                        <li><strong>Subcontractors</strong></li>
+                        <li><strong>Lenders and insurers</strong></li>
                     </ul>
                 </div>
             </div>
@@ -1102,154 +1093,36 @@
         <section class="section services" id="services">
             <div class="container">
                 <div class="section-head">
-                    <h2>Commercial support from the first numbers to the final account.</h2>
-                    <p class="lede">
-                        Flexible support tailored to where your project is at. Take one
-                        service, or have us alongside you the whole way through.
-                    </p>
+                    <h2>What we do</h2>
+                    <p class="lede">From the first estimate to the final account. Take one service, or have us with you the whole way.</p>
                 </div>
 
                 <div class="stages">
                     <div class="stage">
                         <h3>Before you build</h3>
-                        <p>Know what it will cost before you commit.</p>
                         <ul>
-                            <li>
-                                <h4>Project feasibility and advice</h4>
-                                <p>Preliminary cost advice, feasibility assessments and commercial input before you commit to a project.</p>
-                            </li>
-                            <li>
-                                <h4>Cost planning and management</h4>
-                                <p>Early appraisals, cost plans and estimates, then ongoing cost management to keep the project within budget.</p>
-                            </li>
-                            <li>
-                                <h4>Procurement advice</h4>
-                                <p>Tendering, trade pricing and procurement strategy to help you choose the right approach.</p>
-                            </li>
+                            <li><h4>Feasibility and cost advice</h4></li>
+                            <li><h4>Cost plans and estimates</h4></li>
+                            <li><h4>Tender and procurement advice</h4></li>
                         </ul>
                     </div>
-
                     <div class="stage">
                         <h3>During the build</h3>
-                        <p>Keep costs, claims and changes under control.</p>
                         <ul>
-                            <li>
-                                <h4>Contract administration</h4>
-                                <p>Progress claims, variations, payment assessments and final accounts.</p>
-                            </li>
-                            <li>
-                                <h4>Bank finance reporting</h4>
-                                <p>Clear reporting and cost information to support lender requirements, drawdowns and project monitoring.</p>
-                            </li>
-                            <li>
-                                <h4>Construction advisory</h4>
-                                <p>Commercial support for builders and project teams when extra QS capability or independent advice is needed.</p>
-                            </li>
+                            <li><h4>Contract administration and claims</h4></li>
+                            <li><h4>Bank finance reporting</h4></li>
+                            <li><h4>QS support for builders</h4></li>
                         </ul>
                     </div>
-
                     <div class="stage">
                         <h3>Estimates and reviews</h3>
-                        <p>A reliable number, or a second opinion on one.</p>
                         <ul>
-                            <li>
-                                <h4>Renovation and rebuild estimates</h4>
-                                <p>Detailed estimates for renovations, additions, alterations, repairs and full residential rebuilds.</p>
-                            </li>
-                            <li>
-                                <h4>Insurance services</h4>
-                                <p>Reinstatement estimates, insurance valuations and cost advice for repair and rebuild projects.</p>
-                            </li>
-                            <li>
-                                <h4>Independent cost review</h4>
-                                <p>A review of budgets, estimates, tenders or project costs when you need a second set of eyes.</p>
-                            </li>
+                            <li><h4>Renovation and rebuild estimates</h4></li>
+                            <li><h4>Insurance reinstatement estimates</h4></li>
+                            <li><h4>Independent cost reviews</h4></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section class="section projects" id="projects">
-            <div class="container">
-                <div class="section-head">
-                    <h2>The kind of work we take on.</h2>
-                    <p class="lede">
-                        Every project is different, but most fall into a few familiar
-                        shapes. Here's what we typically provide for each.
-                    </p>
-                </div>
-
-                <div class="project-grid">
-                    <article class="project">
-                        <h3>Insurance repair and rebuild</h3>
-                        <p>When a property is damaged, you need a reliable figure for what it will really cost to put right, and someone keeping track of it through the repair.</p>
-                        <ul>
-                            <li>Reinstatement and repair estimates</li>
-                            <li>Scope review against the damage</li>
-                            <li>Cost reporting through the build</li>
-                        </ul>
-                    </article>
-
-                    <article class="project">
-                        <h3>Residential new builds</h3>
-                        <p>Getting the budget right before construction starts, then keeping it on track once it does.</p>
-                        <ul>
-                            <li>Cost plans at design stage</li>
-                            <li>Tender and quote review</li>
-                            <li>Progress claim and variation assessment</li>
-                            <li>Final account</li>
-                        </ul>
-                    </article>
-
-                    <article class="project">
-                        <h3>Renovations and additions</h3>
-                        <p>Alterations are where costs most often drift. A detailed estimate up front means fewer surprises once the walls come off.</p>
-                        <ul>
-                            <li>Detailed estimate before you commit</li>
-                            <li>Pricing of changes and variations</li>
-                            <li>Budget tracking through the job</li>
-                        </ul>
-                    </article>
-
-                    <article class="project">
-                        <h3>Development and bank funding</h3>
-                        <p>For developers and investors who need to know a project stacks up, and lenders who need independent reporting along the way.</p>
-                        <ul>
-                            <li>Feasibility and preliminary cost advice</li>
-                            <li>Cost-to-complete reporting for lenders</li>
-                            <li>Progress reporting for drawdowns</li>
-                        </ul>
-                    </article>
-                </div>
-
-                <p class="projects-note">
-                    Working on something that doesn't fit neatly into one of these?
-                    Most projects don't. <a href="#contact">Tell us about yours</a>.
-                </p>
-            </div>
-        </section>
-
-        <!-- CLIENTS -->
-        <section class="section clients" id="clients">
-            <div class="container clients-grid">
-                <div>
-                    <h2>Built around the people behind the project.</h2>
-                    <p class="lede">
-                        Whether you need ongoing QS support or advice on a single
-                        project, we tailor our involvement to suit.
-                    </p>
-                </div>
-
-                <ul class="client-list">
-                    <li>Builders and contractors</li>
-                    <li>Homeowners</li>
-                    <li>Developers</li>
-                    <li>Subcontractors</li>
-                    <li>Property investors</li>
-                    <li>Project teams</li>
-                </ul>
             </div>
         </section>
 
@@ -1257,42 +1130,18 @@
         <section class="section about" id="about">
             <div class="container about-grid">
                 <div>
-                    <h2>Quantity surveying without the unnecessary complexity.</h2>
-
+                    <h2>Quantity surveying without the complexity.</h2>
                     <div class="founder">
-                        <strong>Kyle</strong>
+                        <strong>Kyle Owen</strong>
                         <span>Quantity surveyor</span>
                     </div>
-
-                    <p class="founder-quote">
-                        &ldquo;When you work with OGQS, you deal with me directly, from
-                        the first conversation through to the final account.&rdquo;
-                    </p>
-
-                    <ul class="creds">
-                        <li>Bachelor of Construction</li>
-                        <li>NZIQS member</li>
-                        <li>10+ years in construction</li>
-                    </ul>
                 </div>
 
                 <div class="about-text">
                     <p>
-                        Owen-Goodall Quantity Surveyors (OGQS) provides independent
-                        quantity surveying and construction advisory services focused
-                        on making projects easier to understand, manage and deliver.
-                    </p>
-                    <p>
-                        We work alongside our clients rather than simply producing
-                        numbers. That means understanding the project, identifying
-                        commercial risks early and providing straightforward advice
-                        when decisions need to be made.
-                    </p>
-                    <p>
-                        From a renovation or residential build through to larger
-                        construction projects, our aim is simple: give you clear
-                        information so you can make informed decisions and keep your
-                        project moving.
+                        OGQS is an independent quantity surveying practice. You deal directly
+                        with Kyle from the first conversation to the final account, with clear
+                        numbers and straightforward advice when decisions need to be made.
                     </p>
                 </div>
             </div>
@@ -1302,46 +1151,25 @@
         <section class="section approach" id="approach">
             <div class="container">
                 <div class="section-head">
-                    <h2>How we work matters.</h2>
-                    <p class="lede">
-                        Construction is complicated enough. Our approach is to be
-                        straightforward, accountable and commercially practical, and
-                        our involvement can change as your project develops.
-                    </p>
+                    <h2>How we work</h2>
                 </div>
 
-                <div class="values">
-                    <div class="value">
-                        <h3>Integrity</h3>
-                        <p>Honest advice and transparent information, even when the answer isn't the easiest one.</p>
-                    </div>
-                    <div class="value">
-                        <h3>Responsibility</h3>
-                        <p>We take ownership of our work and understand the importance of getting the detail right.</p>
-                    </div>
-                    <div class="value">
-                        <h3>Accountability</h3>
-                        <p>Clear communication, reliable follow-through and owning the outcomes we contribute to.</p>
-                    </div>
-                </div>
-
-                <h3 class="process-title">Working with OGQS</h3>
                 <ol class="steps">
                     <li class="step">
-                        <h3>Understand the project</h3>
-                        <p>We get across the scope, priorities, budget and commercial requirements before recommending the right level of support.</p>
+                        <h3>Understand</h3>
+                        <p>We get across the scope, the budget and what you need from us.</p>
                     </li>
                     <li class="step">
-                        <h3>Build the numbers</h3>
-                        <p>We establish realistic costs, identify allowances and highlight risks that could affect the project.</p>
+                        <h3>Price</h3>
+                        <p>We set realistic costs and flag the risks early.</p>
                     </li>
                     <li class="step">
-                        <h3>Stay in control</h3>
-                        <p>We monitor costs, variations, claims and commercial decisions as the project progresses.</p>
+                        <h3>Control</h3>
+                        <p>We track costs, claims and variations as the job progresses.</p>
                     </li>
                     <li class="step">
-                        <h3>Close it out</h3>
-                        <p>We bring the commercial side together with clear reporting and final account support.</p>
+                        <h3>Close out</h3>
+                        <p>We finish with clear reporting and an agreed final account.</p>
                     </li>
                 </ol>
             </div>
@@ -1351,38 +1179,25 @@
         <section class="section faq" id="faq">
             <div class="container faq-grid">
                 <div>
-                    <h2>Not sure if you need a QS?</h2>
-                    <p class="lede">A few of the questions we hear most. If yours isn't here, just ask.</p>
+                    <h2>Questions</h2>
                 </div>
 
                 <div class="faq-list">
                     <details class="faq-item">
-                        <summary>What does a quantity surveyor actually do?</summary>
-                        <p>A quantity surveyor looks after the money side of construction. We work out what a project should cost, check prices and claims against the work actually done, and keep track of changes along the way, so you always know where the budget stands.</p>
+                        <summary>What does a quantity surveyor do?</summary>
+                        <p>We look after the money side of construction: what a project should cost, whether claims match the work done, and where the budget stands as things change.</p>
                     </details>
                     <details class="faq-item">
                         <summary>When should I bring in a QS?</summary>
-                        <p>The earlier the better. Decisions made at feasibility and design stage have the biggest effect on cost. That said, we're often brought in part-way through a project to check a tender, assess claims and variations, or get a budget back under control.</p>
+                        <p>The earlier the better, as design decisions have the biggest effect on cost. We can also step in part-way through to check a tender, assess claims or get a budget back on track.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Is a QS only worth it for big projects?</summary>
-                        <p>No. A detailed estimate on a renovation, a single new home or an insurance repair can save far more than it costs. We scale our involvement to suit the project, from a one-off estimate to ongoing support.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Do you work for builders as well as property owners?</summary>
-                        <p>Yes. We help builders and subcontractors with estimating, progress claims, variations and final accounts, and can step in as extra QS capacity when a team is stretched.</p>
+                        <summary>Is it worth it for a smaller project?</summary>
+                        <p>Usually, yes. A detailed estimate on a renovation, new home or insurance repair often saves far more than it costs.</p>
                     </details>
                     <details class="faq-item">
                         <summary>Do you work outside Christchurch?</summary>
-                        <p>Yes. We're based in Christchurch and work with clients across the South Island. Much of our work is done from drawings and project documents, and we visit site whenever the project needs it.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>What do you need from me to get started?</summary>
-                        <p>Plans or drawings if you have them, a rough idea of scope, budget and timing, and anything you've already been quoted. If it's still early days, a conversation is a perfectly good place to start.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How are your fees worked out?</summary>
-                        <p>Fees depend on the size of the project and how involved you need us to be. Send through a short description and we'll provide a clear quote before any work starts.</p>
+                        <p>Yes, across the South Island. Much of the work is done from drawings, and we visit site whenever the project needs it.</p>
                     </details>
                 </div>
             </div>
@@ -1394,8 +1209,7 @@
                 <div>
                     <h2>Have a project in mind?</h2>
                     <p class="lede">
-                        Tell us a little about it and we'll get back to you to talk it
-                        through. Or get in touch directly.
+                        Tell us a little about it and we'll be in touch.
                     </p>
 
                     <ul class="contact-direct">
